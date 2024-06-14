@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07c9b2c97f84356bb2bfac29363e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StyleTrainerData:
+    rid: 1270464025052840127
+  m_DefaultStyleData:
+    rid: 1270464025052840128
+  m_DefaultStyleVersion: 0
+  m_DefaultStyles: []
+  m_AssetPath: 
+  m_PreviousProjectIDs: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1270464025052840127
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: a6f1d922-c5bb-4966-a285-36f6d5be0a1f
+        m_State: 3
+        m_Disposing: 0
+        m_Styles: []
+        m_Version: 202231001
+    - rid: 1270464025052840128
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 774eaa4a-4d2a-4101-a0d8-e8e23d0daeac
+        m_State: 3
+        m_Disposing: 0
+        m_Styles: []
+        m_Version: 202231001
