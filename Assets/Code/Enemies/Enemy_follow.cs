@@ -26,4 +26,6 @@ public class Enemy_follow : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
         
     }
+    
 }
+
