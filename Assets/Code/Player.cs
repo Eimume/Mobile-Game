@@ -14,8 +14,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         playermovement();
-        Attack();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+        
     }
+
 
     void playermovement()
     {
@@ -25,10 +31,13 @@ public class Player : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Damage " + PlayerDamage );
+ 
+        Debug.Log("Damage " + PlayerDamage);
+        
+    }
 
-        }
+    void Damage()
+    {
+        Debug.Log(PlayerDamage);
     }
 }
