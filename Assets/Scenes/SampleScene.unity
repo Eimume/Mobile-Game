@@ -485,9 +485,9 @@ GameObject:
   - component: {fileID: 1732975131}
   - component: {fileID: 1732975130}
   - component: {fileID: 1732975129}
-  - component: {fileID: 1732975128}
   - component: {fileID: 1732975133}
   - component: {fileID: 1732975134}
+  - component: {fileID: 1732975135}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -495,20 +495,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1732975128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732975127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6af57e1d03b4cbe48a9610c2e8e176b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  lineOfSite: 7
 --- !u!61 &1732975129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -680,6 +666,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9e87911e0186f4ab593dcbddbffb5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1732975135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732975127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e27bcacf0bc6e49bfff1d722ff7ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  lineOfSite: 5.92
+  stopLine: 1.25
 --- !u!1 &1757006068
 GameObject:
   m_ObjectHideFlags: 0
