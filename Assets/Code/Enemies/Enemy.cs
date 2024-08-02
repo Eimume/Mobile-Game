@@ -1,75 +1,33 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public string enemyType;
-    public Transform player;
-    public float enemySpeed;
-    public float DamageEnemy;
-    public bool InRed = false;
-    public Transform trigger;
-    private Vector2 enemyDirection;
-    private Rigidbody2D rb;
-
+   private Transform player;
+    public float lineOfSite;
+    NavMeshAgent agent;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("player").transform; 
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
+
+    // Update is called once per frame
     void Update()
     {
-        /*if (InRed)
-        {}*/
-            followPlayer();
-        
-    }
-
-    public void followPlayer()
-    {
-        //if (Inactive == false)
-        
-        if (player != null)
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+        if (distanceFromPlayer < lineOfSite)
         {
-            enemyDirection = (player.position - transform.position).normalized;
-            //transform.Translate(enemyDirection * enemySpeed );
-            rb.velocity = enemyDirection * enemySpeed;
-            //Debug.Log("Follw Player");
-        }
-        
-    }
-    void OnTriggerEnter2D(Collider2D Player)
-    {
-        if (Player.tag == "player")
-        {
-            InRed = true;
-            Debug.Log("In");
+            agent.SetDestination(player.position);
         }
     }
-    void OnTriggerExit2D(Collider2D Player)
+    void OnDrawGizmosSelected()
     {
-        if (Player.tag == "player")
-        {
-            InRed = false;
-            Debug.Log("Out");
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lineOfSite);
     }
-
-    /*
-    private void OnTriggerEnter2D(Collider2D Player)
-    {
-        if (Player.tag == "player")
-        {
-            InRed = true;
-            Debug.Log("In");
-        }
-    }
-    private void OnTriggerExit2D(Collider2D Player)
-    {
-        if (Player.tag == "player")
-        {
-            InRed = false;
-            Debug.Log("Out");
-        }
-    }
-    */
     
 }
