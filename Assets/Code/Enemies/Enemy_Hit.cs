@@ -7,6 +7,11 @@ public class Enemy_Hit : MonoBehaviour
     public Transform Player;
     public float TimeHitCoolDown;
     private bool canHit = true;
+    public float shootcooldown = 5f;
+    public GameObject bulletPrefab;
+
+    private float timer = 0f;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("player").transform;
@@ -23,6 +28,13 @@ public class Enemy_Hit : MonoBehaviour
     }
     void HitAction()
     {
+        timer += Time.deltaTime;
+
+        if (timer > shootcooldown)
+        {
+
+        }
+
         Debug.Log("Hit Player");
 
         StartCoroutine(CoolDown());

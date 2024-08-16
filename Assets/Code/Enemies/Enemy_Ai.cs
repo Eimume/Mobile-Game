@@ -9,6 +9,7 @@ public class Enemy_Ai : MonoBehaviour
 
     public float speed = 10f;
     public float nextWaypointDistance = 3f;
+    public float lineMove;
 
     public Transform enemyGPX;
 
@@ -44,14 +45,28 @@ public class Enemy_Ai : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        float distancePlayer = Vector2.Distance(target.position, transform.position);
+        if(distancePlayer < lineMove)
+        {
+            FollowPlayerPath();
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lineMove);
+    }
+    void FollowPlayerPath()
+    {
         if (path == null)
             return;
-        
-        if(currentWaypoint >= path.vectorPath.Count)
+
+        if (currentWaypoint >= path.vectorPath.Count)
         {
             reachedEndOfPath = true;
             return;
-        } else
+        }
+        else
         {
             reachedEndOfPath = false;
         }
