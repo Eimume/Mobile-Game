@@ -1,0 +1,1493 @@
+fileFormatVersion: 2
+guid: 2ce7a3bd73afdcb48b825861f627167a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4701329900632161165
+    second: tilemapgodjelly_0
+  - first:
+      213: -5128796968839782397
+    second: tilemapgodjelly_1
+  - first:
+      213: -6470278853169365083
+    second: tilemapgodjelly_2
+  - first:
+      213: -3656851234597551300
+    second: tilemapgodjelly_3
+  - first:
+      213: -4332952388284918739
+    second: tilemapgodjelly_4
+  - first:
+      213: -6301348066956646111
+    second: tilemapgodjelly_5
+  - first:
+      213: 1805080823250958827
+    second: tilemapgodjelly_6
+  - first:
+      213: 5354271451462026582
+    second: tilemapgodjelly_7
+  - first:
+      213: -2741803604554829041
+    second: tilemapgodjelly_8
+  - first:
+      213: -6805554084185648708
+    second: tilemapgodjelly_9
+  - first:
+      213: -3892385413286570315
+    second: tilemapgodjelly_10
+  - first:
+      213: -5178473411278898174
+    second: tilemapgodjelly_11
+  - first:
+      213: -2594334655380753386
+    second: tilemapgodjelly_12
+  - first:
+      213: 6726038830890271398
+    second: tilemapgodjelly_13
+  - first:
+      213: -6171991478814479310
+    second: tilemapgodjelly_14
+  - first:
+      213: 1966235266809473313
+    second: tilemapgodjelly_15
+  - first:
+      213: -6438501619964699217
+    second: tilemapgodjelly_16
+  - first:
+      213: 7320674855244509189
+    second: tilemapgodjelly_17
+  - first:
+      213: 4890601674302373803
+    second: tilemapgodjelly_18
+  - first:
+      213: -3654167014204803409
+    second: tilemapgodjelly_19
+  - first:
+      213: -8888348610002435681
+    second: tilemapgodjelly_20
+  - first:
+      213: 3708187792966914052
+    second: tilemapgodjelly_21
+  - first:
+      213: 7789821689816630624
+    second: tilemapgodjelly_22
+  - first:
+      213: 4955068479402028750
+    second: tilemapgodjelly_23
+  - first:
+      213: -2680667535397834863
+    second: tilemapgodjelly_24
+  - first:
+      213: -1893041198727942158
+    second: tilemapgodjelly_25
+  - first:
+      213: 8160462125105658848
+    second: tilemapgodjelly_26
+  - first:
+      213: 7024035020417616022
+    second: tilemapgodjelly_27
+  - first:
+      213: -7089391179412399439
+    second: tilemapgodjelly_28
+  - first:
+      213: -1232149693665247773
+    second: tilemapgodjelly_29
+  - first:
+      213: -8825401699125156683
+    second: tilemapgodjelly_30
+  - first:
+      213: 3610915355862527002
+    second: tilemapgodjelly_31
+  - first:
+      213: 2973237500373509032
+    second: tilemapgodjelly_32
+  - first:
+      213: -1226463168279195109
+    second: tilemapgodjelly_33
+  - first:
+      213: 3722197293279683288
+    second: tilemapgodjelly_34
+  - first:
+      213: -160127169535793235
+    second: tilemapgodjelly_35
+  - first:
+      213: -974220582246333798
+    second: tilemapgodjelly_36
+  - first:
+      213: -5944447322731884065
+    second: tilemapgodjelly_37
+  - first:
+      213: -2065556084019786606
+    second: tilemapgodjelly_38
+  - first:
+      213: -8822856427288787841
+    second: tilemapgodjelly_39
+  - first:
+      213: -4071960349487339331
+    second: tilemapgodjelly_40
+  - first:
+      213: -5394158229361926711
+    second: tilemapgodjelly_41
+  - first:
+      213: -8968318029763791703
+    second: tilemapgodjelly_42
+  - first:
+      213: -166321312525055347
+    second: tilemapgodjelly_43
+  - first:
+      213: -4107902595145995135
+    second: tilemapgodjelly_44
+  - first:
+      213: -4439724081782209081
+    second: tilemapgodjelly_45
+  - first:
+      213: -8531835494004462585
+    second: tilemapgodjelly_46
+  - first:
+      213: 7704524140516408366
+    second: tilemapgodjelly_47
+  - first:
+      213: 4769773145384680420
+    second: tilemapgodjelly_48
+  - first:
+      213: 6099612696914096739
+    second: tilemapgodjelly_49
+  - first:
+      213: 1844268865097034389
+    second: tilemapgodjelly_50
+  - first:
+      213: -60591371014547817
+    second: tilemapgodjelly_51
+  - first:
+      213: -4513114348134721713
+    second: tilemapgodjelly_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilemapgodjelly_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 351
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b3a1bc2aa7e3140800000000000000
+      internalID: 4701329900632161165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3006433945ad2d8b0800000000000000
+      internalID: -5128796968839782397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 351
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af3e1ff9a3f436a0800000000000000
+      internalID: -6470278853169365083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c334d5d4d21404dc0800000000000000
+      internalID: -3656851234597551300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 351
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24d89382c24ed3c0800000000000000
+      internalID: -4332952388284918739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12964fea15d1d88a0800000000000000
+      internalID: -6301348066956646111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be93ebce17fec0910800000000000000
+      internalID: 1805080823250958827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 351
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655c86754813e4a40800000000000000
+      internalID: 5354271451462026582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 351
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03bf9af52823f9d0800000000000000
+      internalID: -2741803604554829041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1d7682e90dd81a0800000000000000
+      internalID: -6805554084185648708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b65420e6187bf9c0800000000000000
+      internalID: -3892385413286570315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 351
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c7ae18edd5228b0800000000000000
+      internalID: -5178473411278898174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6147b8550621ffbd0800000000000000
+      internalID: -2594334655380753386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_13
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 351
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2c2bc3ea0b75d50800000000000000
+      internalID: 6726038830890271398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 351
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c668c537ea85aa0800000000000000
+      internalID: -6171991478814479310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_15
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 351
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129260fbe88794b10800000000000000
+      internalID: 1966235266809473313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_16
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 351
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad1a38a3e8d5a6a0800000000000000
+      internalID: -6438501619964699217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500bbf68ef2489560800000000000000
+      internalID: 7320674855244509189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 283
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf39beaf48eed340800000000000000
+      internalID: 4890601674302373803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 319
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa67f50167ac94dc0800000000000000
+      internalID: -3654167014204803409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_20
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 319
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91c7fc180e36a480800000000000000
+      internalID: -8888348610002435681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 319
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4009b30a621267330800000000000000
+      internalID: 3708187792966914052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 319
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 065472dfd810b1c60800000000000000
+      internalID: 7789821689816630624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_23
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 303
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece2e786780f3c440800000000000000
+      internalID: 4955068479402028750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_24
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 295
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fa0bf441b5ccad0800000000000000
+      internalID: -2680667535397834863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_25
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 319
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff24ac3f019ab5e0800000000000000
+      internalID: -1893041198727942158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_26
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebb3f91119cf3170800000000000000
+      internalID: 8160462125105658848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_27
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 319
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69845e9d2a26a7160800000000000000
+      internalID: 7024035020417616022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 319
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba1655984c6d9d90800000000000000
+      internalID: -7089391179412399439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_29
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 303
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edf9feb16686eee0800000000000000
+      internalID: -1232149693665247773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_30
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 303
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b42483e9efd58580800000000000000
+      internalID: -8825401699125156683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_31
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 303
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c603c726c8c1230800000000000000
+      internalID: 3610915355862527002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_32
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 303
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a322a2f0cf034920800000000000000
+      internalID: 2973237500373509032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_33
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 307
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b125e9c1f3abafee0800000000000000
+      internalID: -1226463168279195109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_34
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 303
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d22bd997b6e7a330800000000000000
+      internalID: 3722197293279683288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 161
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da72eec003d17cdf0800000000000000
+      internalID: -160127169535793235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 287
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a924556ca8fda72f0800000000000000
+      internalID: -974220582246333798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_37
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 128
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd15b8ea7a4118da0800000000000000
+      internalID: -5944447322731884065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_38
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 150
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c8a547faba553e0800000000000000
+      internalID: -2065556084019786606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_39
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 150
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f740e2b23daee8580800000000000000
+      internalID: -8822856427288787841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_40
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 129
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8e455e2ad7d77c0800000000000000
+      internalID: -4071960349487339331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_41
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 150
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cdd1ac7ba91425b0800000000000000
+      internalID: -5394158229361926711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_42
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 127
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4b233a4422a8380800000000000000
+      internalID: -8968318029763791703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_43
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 150
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a0e50c5ab11bdf0800000000000000
+      internalID: -166321312525055347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_44
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 150
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18cea64ba5ccdf6c0800000000000000
+      internalID: -4107902595145995135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_45
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 159
+        width: 178
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5cf94687ee262c0800000000000000
+      internalID: -4439724081782209081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_46
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 111
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c6bc162d4d89980800000000000000
+      internalID: -8531835494004462585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_47
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 111
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cf6eea2e7fbea60800000000000000
+      internalID: 7704524140516408366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_48
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 111
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebf9d58763a13240800000000000000
+      internalID: 4769773145384680420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_49
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 111
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362f6034e6d26a450800000000000000
+      internalID: 6099612696914096739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_50
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 111
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59aeb6ee2c8289910800000000000000
+      internalID: 1844268865097034389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_51
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 111
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7965936187cb82ff0800000000000000
+      internalID: -60591371014547817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapgodjelly_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 161
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4716b079623e51c0800000000000000
+      internalID: -4513114348134721713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tilemapgodjelly_0: 4701329900632161165
+      tilemapgodjelly_1: -5128796968839782397
+      tilemapgodjelly_10: -3892385413286570315
+      tilemapgodjelly_11: -5178473411278898174
+      tilemapgodjelly_12: -2594334655380753386
+      tilemapgodjelly_13: 6726038830890271398
+      tilemapgodjelly_14: -6171991478814479310
+      tilemapgodjelly_15: 1966235266809473313
+      tilemapgodjelly_16: -6438501619964699217
+      tilemapgodjelly_17: 7320674855244509189
+      tilemapgodjelly_18: 4890601674302373803
+      tilemapgodjelly_19: -3654167014204803409
+      tilemapgodjelly_2: -6470278853169365083
+      tilemapgodjelly_20: -8888348610002435681
+      tilemapgodjelly_21: 3708187792966914052
+      tilemapgodjelly_22: 7789821689816630624
+      tilemapgodjelly_23: 4955068479402028750
+      tilemapgodjelly_24: -2680667535397834863
+      tilemapgodjelly_25: -1893041198727942158
+      tilemapgodjelly_26: 8160462125105658848
+      tilemapgodjelly_27: 7024035020417616022
+      tilemapgodjelly_28: -7089391179412399439
+      tilemapgodjelly_29: -1232149693665247773
+      tilemapgodjelly_3: -3656851234597551300
+      tilemapgodjelly_30: -8825401699125156683
+      tilemapgodjelly_31: 3610915355862527002
+      tilemapgodjelly_32: 2973237500373509032
+      tilemapgodjelly_33: -1226463168279195109
+      tilemapgodjelly_34: 3722197293279683288
+      tilemapgodjelly_35: -160127169535793235
+      tilemapgodjelly_36: -974220582246333798
+      tilemapgodjelly_37: -5944447322731884065
+      tilemapgodjelly_38: -2065556084019786606
+      tilemapgodjelly_39: -8822856427288787841
+      tilemapgodjelly_4: -4332952388284918739
+      tilemapgodjelly_40: -4071960349487339331
+      tilemapgodjelly_41: -5394158229361926711
+      tilemapgodjelly_42: -8968318029763791703
+      tilemapgodjelly_43: -166321312525055347
+      tilemapgodjelly_44: -4107902595145995135
+      tilemapgodjelly_45: -4439724081782209081
+      tilemapgodjelly_46: -8531835494004462585
+      tilemapgodjelly_47: 7704524140516408366
+      tilemapgodjelly_48: 4769773145384680420
+      tilemapgodjelly_49: 6099612696914096739
+      tilemapgodjelly_5: -6301348066956646111
+      tilemapgodjelly_50: 1844268865097034389
+      tilemapgodjelly_51: -60591371014547817
+      tilemapgodjelly_52: -4513114348134721713
+      tilemapgodjelly_6: 1805080823250958827
+      tilemapgodjelly_7: 5354271451462026582
+      tilemapgodjelly_8: -2741803604554829041
+      tilemapgodjelly_9: -6805554084185648708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
