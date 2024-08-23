@@ -3,8 +3,11 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-   private Transform player;
+    private Transform player;
     public float lineOfSite;
+    [Header("Stats")]
+    public int Health = 100;
+    
     NavMeshAgent agent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,5 +32,8 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
     }
-    
+    public void TakeDamage()
+    {
+        Debug.Log("Hit");
+    }
 }
