@@ -36,18 +36,22 @@ public class Enemy_Ai : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("player").transform;
-        //viewRadius = lineMove;
+        viewRadius = lineMove;
         noWall = true;
-        playerInSight = false; 
+        playerInSight = false;
+        if (seeker == null || rb == null || target == null)
+        {
+            Debug.LogError("Missing essential components! Ensure Seeker, Rigidbody2D, and target are set.");
+        }
         InvokeRepeating("UpdatePath", 0f, .5f);
         
     }
     void UpdatePath()
     {
         if (playerInSight && seeker.IsDone())
-        {
+            Debug.Log("Updating path to player...");
             seeker.StartPath(rb.position, target.position, OnPathComplete);
-        }
+
     }
     void OnPathComplete(Path p)
     {
@@ -76,8 +80,8 @@ public class Enemy_Ai : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lineMove);
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, viewRadius);
+        /*Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, viewRadius);*/
 
         Vector3 fovLine1 = Quaternion.Euler(0, 0, viewAngle / 2) * transform.right * viewRadius;
         Vector3 fovLine2 = Quaternion.Euler(0, 0, -viewAngle / 2) * transform.right * viewRadius;
@@ -135,19 +139,16 @@ public class Enemy_Ai : MonoBehaviour
         {
             float distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
-            if (!Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, mask))
+            if (Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, mask))
             {
                 noWall = true;
                 playerInSight = true;
-                // Player is within line of sight
                 Debug.Log("Player detected!");
                 // Implement your logic here (e.g., chase player, attack, etc.)
-            }
-            else
+            } else
             {
                 noWall = false;
                 playerInSight = false;
-                // Player is blocked by an obstacle
                 Debug.Log("Player blocked by an obstacle.");
             }
         }
