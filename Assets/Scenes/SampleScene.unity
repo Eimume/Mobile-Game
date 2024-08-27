@@ -288,7 +288,7 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -1172,6 +1172,14 @@ MonoBehaviour:
   speed: 400
   nextWaypointDistance: 3
   lineMove: 5.72
+  viewRadius: 5.72
+  viewAngle: 90
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   enemyGPX: {fileID: 470360057}
 --- !u!50 &1166745164
 Rigidbody2D:
@@ -1186,7 +1194,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1.5
+  m_LinearDrag: 1.2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -1297,16 +1305,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166745162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c38b733b24af00740bbdc8aa59f96dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineOfSite: 4.01
+  lineOfSite: 0
   Player: {fileID: 0}
   TimeHitCoolDown: 3
   shootcooldown: 5
   bulletPrefab: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1375080435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1395,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.17738654, g: 0.41509432, b: 0.06852971, a: 1}
+  m_Color: {r: 0.69286627, g: 1, b: 0.5518868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1424,12 +1435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70bd44a44cd62c64fbfc1eea95b24880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Order>k__BackingField: 0
-  m_navMeshOwner: {fileID: 1407674478}
-  m_OverrideByGrid: 0
-  m_UseMeshPrefab: {fileID: 0}
-  m_CompressBounds: 0
-  m_OverrideVector: {x: 1, y: 1, z: 1}
 --- !u!114 &1407674478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,25 +1447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04976799df50f54ba128eff723155a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_BuildHeightMesh: 0
-  m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 548a067d4a2cf9141947fd0a174aa005, type: 2}
-  m_LastPosition: {x: 2.7268271, y: -1.233793, z: -0.02569784}
-  m_LastRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
 --- !u!4 &1407674479
 Transform:
   m_ObjectHideFlags: 0
