@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class Enemy_Hit : MonoBehaviour
@@ -33,19 +34,7 @@ public class Enemy_Hit : MonoBehaviour
             HitAction();
         }
     }
-    void HitAction()
-    {
-        timer += Time.deltaTime;
 
-        if (timer > shootcooldown)
-        {
-            Debug.Log("shoot");
-        }
-
-       
-
-        StartCoroutine(CoolDown());
-    }
 
     private void OnDrawGizmos()
     {
@@ -66,11 +55,21 @@ public class Enemy_Hit : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + fovLine1);
         Gizmos.DrawLine(transform.position, transform.position + fovLine2);
     }
+
+    void HitAction()
+    {
+        timer += Time.deltaTime;
+
+        if (timer > shootcooldown)
+        {
+            Debug.Log("shoot");
+        }
+        StartCoroutine(CoolDown());
+    }
     IEnumerator CoolDown()
     {
         canHit = false;
         yield return new WaitForSeconds(TimeHitCoolDown);
-
         canHit = true;
     }
 
@@ -87,46 +86,49 @@ public class Enemy_Hit : MonoBehaviour
     }
     void shooter()
     {
-        //Vector3 directionToPlayer = (Player.position - transform.position).normalized;
+        
 
     }
-    void CheckLineOfSight()
+    
+
+}
+/*
+void CheckLineOfSight()
+{
+    Vector3 directionToPlayer = (Player.position - transform.position).normalized;
+    float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
+
+    if (Vector3.Angle(transform.right, directionToPlayer) < viewAngle / 2)
     {
-        Vector3 directionToPlayer = (Player.position - transform.position).normalized;
-        float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
-
-        if (Vector3.Angle(transform.right, directionToPlayer) < viewAngle / 2)
+        if (distanceToPlayer < viewDistance)
         {
-            if (distanceToPlayer < viewDistance)
-            {
-                // Perform the raycast
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, mask);
+            // Perform the raycast
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, mask);
 
-                if (hit.collider == null)
-                {
-                    // No obstruction, player is in sight
-                    playerInSight = true;
-                    Debug.Log("Player is in sight!");
-                    // Implement logic when player is detected, e.g., chasing
-                }
-                else
-                {
-                    // Obstruction is in the way
-                    playerInSight = false;
-                    Debug.Log("Player is blocked by an obstacle.");
-                }
+            if (hit.collider == null)
+            {
+                // No obstruction, player is in sight
+                playerInSight = true;
+                Debug.Log("Player is in sight!");
+                // Implement logic when player is detected, e.g., chasing
             }
             else
             {
+                // Obstruction is in the way
                 playerInSight = false;
-                Debug.Log("Player is out of range.");
+                Debug.Log("Player is blocked by an obstacle.");
             }
         }
         else
         {
             playerInSight = false;
-            Debug.Log("Player is outside the field of view.");
+            Debug.Log("Player is out of range.");
         }
     }
-
+    else
+    {
+        playerInSight = false;
+        Debug.Log("Player is outside the field of view.");
+    }
 }
+*/
