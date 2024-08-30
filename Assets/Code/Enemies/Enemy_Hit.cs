@@ -21,7 +21,7 @@ public class Enemy_Hit : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("player").transform;
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame

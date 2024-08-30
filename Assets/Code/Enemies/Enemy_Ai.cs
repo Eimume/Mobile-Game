@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEditor.PlayerSettings;
-//using static UnityEngine.RuleTile.TilingRuleOutput;
 
 
 public class Enemy_Ai : MonoBehaviour
@@ -20,8 +19,6 @@ public class Enemy_Ai : MonoBehaviour
     public LayerMask mask;
 
     //private Vector2 velocity;
-    private bool noWall;
-    private bool playerInSight;
 
     public Transform enemyGPX;
 
@@ -35,21 +32,14 @@ public class Enemy_Ai : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("player").transform;
-        viewRadius = lineMove;
-        noWall = true;
-        playerInSight = false;
-        if (seeker == null || rb == null || target == null)
-        {
-            Debug.LogError("Missing essential components! Ensure Seeker, Rigidbody2D, and target are set.");
-        }
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
         InvokeRepeating("UpdatePath", 0f, .5f);
         
     }
     void UpdatePath()
     {
-        if (playerInSight && seeker.IsDone())
-            Debug.Log("Updating path to player...");
+        if (seeker.IsDone())
             seeker.StartPath(rb.position, target.position, OnPathComplete);
 
     }
@@ -68,11 +58,8 @@ public class Enemy_Ai : MonoBehaviour
         float distancePlayer = Vector2.Distance(target.position, transform.position);
         if(distancePlayer < lineMove)
         {
-            CheckLineOfSight();
-            if (playerInSight)
-            {
                 FollowPlayerPath();
-            }
+            
         }
     }
     private void OnDrawGizmos()
@@ -80,21 +67,6 @@ public class Enemy_Ai : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lineMove);
 
-        /*Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, viewRadius);*/
-
-        Vector3 fovLine1 = Quaternion.Euler(0, 0, viewAngle / 2) * transform.right * viewRadius;
-        Vector3 fovLine2 = Quaternion.Euler(0, 0, -viewAngle / 2) * transform.right * viewRadius;
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + fovLine1);
-        Gizmos.DrawLine(transform.position, transform.position + fovLine2);
-
-        if (target != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(transform.position, target.position);
-        }
     }
     void FollowPlayerPath()
     {
@@ -132,34 +104,6 @@ public class Enemy_Ai : MonoBehaviour
             enemyGPX.localScale = new Vector3(1f, 1f, 1f);
         }
     }
-    void CheckLineOfSight()
-    {
-        Vector3 directionToPlayer = (target.position - transform.position).normalized;
-        if (Vector3.Angle(transform.right, directionToPlayer) < viewAngle / 2)
-        {
-            float distanceToPlayer = Vector3.Distance(transform.position, target.position);
-
-            if (Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, mask))
-            {
-                noWall = true;
-                playerInSight = true;
-                Debug.Log("Player detected!");
-                // Implement your logic here (e.g., chase player, attack, etc.)
-            } else
-            {
-                noWall = false;
-                playerInSight = false;
-                Debug.Log("Player blocked by an obstacle.");
-            }
-        }
-        else
-        {
-            playerInSight = false ;
-            // Player is outside the view angle
-            Debug.Log("Player outside field of view.");
-        }
-    }
-
 }
 
 /*
