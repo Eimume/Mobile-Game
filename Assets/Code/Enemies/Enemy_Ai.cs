@@ -13,10 +13,9 @@ public class Enemy_Ai : MonoBehaviour
     public float speed = 10f;
     public float nextWaypointDistance = 3f;
     public float lineMove;
-    public float viewRadius;
-    public float viewAngle;
-    public LayerMask targetMask;
-    public LayerMask mask;
+
+    //public LayerMask targetMask;
+    //public LayerMask mask;
 
     //private Vector2 velocity;
 
