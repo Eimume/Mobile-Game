@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 59340117}
   - component: {fileID: 59340116}
   m_Layer: 0
-  m_Name: damage
+  m_Name: Hit area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,6 +871,7 @@ MonoBehaviour:
   player: {fileID: 0}
   detectionRadius: 6.82
   stoppingDistance: 3.66
+  retreatSpeed: 2
 --- !u!114 &693448147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389136708}
   m_Layer: 0
-  m_Name: hitbox
+  m_Name: Shoot Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

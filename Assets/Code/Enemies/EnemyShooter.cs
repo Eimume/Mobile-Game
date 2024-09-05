@@ -13,14 +13,14 @@ public class EnemyShooter : MonoBehaviour
 
     void Start()
     {
-        // Find the player by tag (assuming the player is tagged as "Player")
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
-        // Count down the timer for shooting
-        shootingTimer -= Time.deltaTime;
+        if (canShoot)
+        {       
+            shootingTimer -= Time.deltaTime;
 
         // If the timer reaches zero, shoot a bullet
         if (shootingTimer <= 0f)
@@ -28,11 +28,12 @@ public class EnemyShooter : MonoBehaviour
             Shoot();
             shootingTimer = shootingInterval; // Reset the timer
         }
+        }
     }
 
-    void Shoot()
+    private void Shoot()
     {
-             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             
             if (player != null)
             {

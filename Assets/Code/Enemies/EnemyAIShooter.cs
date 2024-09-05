@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyAIShooter : MonoBehaviour
 {
-   public Transform player; // Reference to the player's position
+    public Transform player; // Reference to the player's position
     public float detectionRadius = 10f; // Distance for enemy to start following
     public float stoppingDistance = 5f; // Distance from player where enemy will stop moving
     public float retreatSpeed = 2f; // Speed at which the enemy retreats when player is too close
@@ -23,30 +23,35 @@ public class EnemyAIShooter : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
+        if (distanceToPlayer < detectionRadius)
+        {
+            enemyShooter.EnableShooting(true); // Enable shooting if the player is inside detection radius
+        }
+        else
+        {
+            enemyShooter.EnableShooting(false); // Disable shooting if the player is outside detection radius
+        }
+
         // If player is within detection range, start following
          if (distanceToPlayer < detectionRadius && distanceToPlayer > stoppingDistance)
         {
             isFollowingPlayer = true;
-            enemyShooter.EnableShooting(false); // Disable shooting while following
+            pathfinding.FollowPlayerPath();
+            
         }
         else if (distanceToPlayer <= stoppingDistance) 
         {
             isFollowingPlayer = false;
             RetreatFromPlayer(); // Start retreating when too close
-            enemyShooter.EnableShooting(true); // Enable shooting when retreating
+            
         }
         else
         {
             isFollowingPlayer = false;
             pathfinding.StopMoving(); // Stop moving when out of range
-            enemyShooter.EnableShooting(false); // Disable shooting when out of range
+            
         }
-
-        // If following, use pathfinding to move towards the player
-        if (isFollowingPlayer)
-        {
-            pathfinding.FollowPlayerPath();
-        }
+        
     }
     
     void RetreatFromPlayer()
