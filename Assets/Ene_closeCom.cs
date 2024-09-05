@@ -3,11 +3,13 @@ using System.Collections;
 
 public class Ene_closeCom : MonoBehaviour
 {
-    public GameObject player;
     public int damage = 10;
     public float TimeHitCoolDown;
+
     private bool canHit = true;
+    private bool isPlayerInTrigger = false;
     private float cooldownTimer = 0f;
+    private GameObject player;
 
 void Start ()
     {
@@ -26,7 +28,7 @@ void Start ()
             }
         }
 
-        if (player != null && canHit)
+        if (isPlayerInTrigger && canHit)
         {
              Player_HP playerHealth = player.GetComponent<Player_HP>();
             if (playerHealth != null)
@@ -43,19 +45,22 @@ void Start ()
        if (other.CompareTag("Player"))
         {
             player = other.gameObject; // Store the player reference
+            isPlayerInTrigger = true;
+            canHit = true;
         }
     }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Damage is handled in Update() with a cooldown
+            isPlayerInTrigger = true;
         }
     }
      private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            isPlayerInTrigger = false;
             player = null; // Clear the player reference
         }
     }
