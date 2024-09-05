@@ -8,6 +8,7 @@ public class Enemy_Hit : MonoBehaviour
     public Transform Hitboxposition;
     public float lineOfSite;
     public Transform Player;
+    //public Transform Obstacle;
     public float TimeHitCoolDown;
     private bool canHit = true;
     //public float shootcooldown = 5f;
@@ -28,18 +29,11 @@ public class Enemy_Hit : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Ray2D ray = new Ray2D(Hitboxposition.position, Player.position);
-        Debug.DrawRay(ray.origin, ray.direction * lineOfSite, Color.blue);
-        RaycastHit2D hit = Physics2D.Raycast(Hitboxposition.position, Player.position, lineOfSite, mask);
+       
         float distanceFromPlayer = Vector2.Distance(Player.position, transform.position);
         if (distanceFromPlayer < lineOfSite && canHit)
-        {
-            if (hit.collider == null && hit.collider.gameObject == Player)
-            {
-                Debug.DrawRay(ray.origin, ray.direction * lineOfSite, Color.red);
-                HitAction();
-            }
-            
+        {      
+                HitAction();           
         }
     }
 
@@ -67,9 +61,8 @@ public class Enemy_Hit : MonoBehaviour
 
     void HitAction()
     {
-        GameObject clone = Instantiate(bulletPrefab, Hitboxposition.position, Hitboxposition.rotation);
-        Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
-        rb.velocity = velocity;
+
+        Debug.Log("Hit");
         StartCoroutine(CoolDown());
     }
     IEnumerator CoolDown()
