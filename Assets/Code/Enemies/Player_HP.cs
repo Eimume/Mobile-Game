@@ -17,7 +17,7 @@ public class Player_HP : MonoBehaviour
         if (currentHp <= 0)
         {
             currentHp = 0;
-            
+            //Die();
         }
 
         Debug.Log("Player health: " + currentHp);

@@ -1,24 +1,20 @@
 using UnityEngine;
 using Pathfinding;
-using Unity.VisualScripting;
-using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEditor.PlayerSettings;
 
-
-public class Enemy_Ai : MonoBehaviour
+public class AstarPathfinding : MonoBehaviour
 {
     public Transform target;
 
     public float speed = 10f;
     public float nextWaypointDistance = 3f;
-    public float lineMove;
+    //public float lineMove;
 
     public Transform enemyGPX;
 
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
+    bool isMoving = true;
 
     Seeker seeker;
     Rigidbody2D rb;
@@ -30,6 +26,14 @@ public class Enemy_Ai : MonoBehaviour
 
         InvokeRepeating("UpdatePath", 0f, .5f);
         
+    }
+    void Update()
+    {
+        if (isMoving)
+        {
+        FollowPlayerPath();
+        }
+                   
     }
     void UpdatePath()
     {
@@ -46,23 +50,7 @@ public class Enemy_Ai : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        float distancePlayer = Vector2.Distance(target.position, transform.position);
-        if(distancePlayer < lineMove)
-        {
-                FollowPlayerPath();
-            
-        }
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lineMove);
-
-    }
-    void FollowPlayerPath()
+    public void FollowPlayerPath()
     {
         if (path == null)
             return;
@@ -98,5 +86,16 @@ public class Enemy_Ai : MonoBehaviour
             enemyGPX.localScale = new Vector3(1f, 1f, 1f);
         }
     }
-}
+     public void StopMoving()
+    {
+        isMoving = false; // Set the flag to stop movement
+        rb.velocity = Vector2.zero; // Stop any ongoing movement by resetting velocity
+        path = null; // Clear the current path to avoid further movement
+    }
 
+    // Method to resume movement if needed
+    public void ResumeMoving()
+    {
+        isMoving = true;
+    }
+}

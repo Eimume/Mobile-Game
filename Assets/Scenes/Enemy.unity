@@ -229,7 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a0092bf7a0ad34f81df7afdf5d469d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   damage: 10
   TimeHitCoolDown: 2
 --- !u!58 &59340117
@@ -722,7 +721,9 @@ GameObject:
   - component: {fileID: 693448143}
   - component: {fileID: 693448142}
   - component: {fileID: 693448141}
-  - component: {fileID: 693448140}
+  - component: {fileID: 693448145}
+  - component: {fileID: 693448147}
+  - component: {fileID: 693448146}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: enemy
@@ -730,23 +731,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &693448140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693448139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b6014b3feed8e34c94918f2d59bedd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 400
-  nextWaypointDistance: 3
-  lineMove: 6.16
-  enemyGPX: {fileID: 1976353941}
 --- !u!58 &693448141
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -856,6 +840,53 @@ Transform:
   - {fileID: 1383583668}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &693448145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693448139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6343daeca3ea8354cba44a661d7b6327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4805705703453797102, guid: 6e60aba07c07119469561f6ef27903be, type: 3}
+  firePoint: {fileID: 1389136708}
+  shootingInterval: 2
+  bulletSpeed: 5
+--- !u!114 &693448146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693448139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d54a8faea447f4c8e349bd865b5204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  detectionRadius: 6.82
+  stoppingDistance: 3.66
+--- !u!114 &693448147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693448139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1759a2782ec16084f8c796aa558db1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 400
+  nextWaypointDistance: 3
+  enemyGPX: {fileID: 248536384}
 --- !u!1 &1383583667
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1383583668
 Transform:
   m_ObjectHideFlags: 0
@@ -902,7 +933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a0092bf7a0ad34f81df7afdf5d469d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   damage: 10
   TimeHitCoolDown: 2
 --- !u!58 &1383583670
@@ -1276,8 +1306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5c9259652f5384baa809c734f17bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   lineOfSite: 10
   Health: 100
+  agent: {fileID: 0}
 --- !u!1 &1757006068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1766,7 @@ MonoBehaviour:
   speed: 400
   nextWaypointDistance: 3
   lineMove: 6.16
-  enemyGPX: {fileID: 8641306213521844187}
+  enemyGPX: {fileID: 6039051531055144752}
 --- !u!212 &3963999724981797603
 SpriteRenderer:
   m_ObjectHideFlags: 0
