@@ -5,15 +5,15 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy_Hit : MonoBehaviour
 {
+    public Transform Hitboxposition;
     public float lineOfSite;
     public Transform Player;
     public float TimeHitCoolDown;
     private bool canHit = true;
-    public float shootcooldown = 5f;
+    //public float shootcooldown = 5f;
     public GameObject bulletPrefab;
-    public float viewAngle = 90f; 
-    public float viewDistance;
-    private bool playerInSight = false;
+    //public float viewAngle = 90f; 
+    //public float viewDistance;
     public LayerMask mask;
 
     private Vector2 velocity;
@@ -28,10 +28,18 @@ public class Enemy_Hit : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Ray2D ray = new Ray2D(Hitboxposition.position, Player.position);
+        Debug.DrawRay(ray.origin, ray.direction * lineOfSite, Color.blue);
+        RaycastHit2D hit = Physics2D.Raycast(Hitboxposition.position, Player.position, lineOfSite, mask);
         float distanceFromPlayer = Vector2.Distance(Player.position, transform.position);
         if (distanceFromPlayer < lineOfSite && canHit)
         {
-            HitAction();
+            if (hit.collider == null && hit.collider.gameObject == Player)
+            {
+                Debug.DrawRay(ray.origin, ray.direction * lineOfSite, Color.red);
+                HitAction();
+            }
+            
         }
     }
 
@@ -40,7 +48,7 @@ public class Enemy_Hit : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
-
+/*
         if (Player != null)
         {
             Gizmos.color = playerInSight ? Color.green : Color.red;
@@ -54,16 +62,14 @@ public class Enemy_Hit : MonoBehaviour
 
         Gizmos.DrawLine(transform.position, transform.position + fovLine1);
         Gizmos.DrawLine(transform.position, transform.position + fovLine2);
+        */
     }
 
     void HitAction()
     {
-        timer += Time.deltaTime;
-
-        if (timer > shootcooldown)
-        {
-            Debug.Log("shoot");
-        }
+        GameObject clone = Instantiate(bulletPrefab, Hitboxposition.position, Hitboxposition.rotation);
+        Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
+        rb.velocity = velocity;
         StartCoroutine(CoolDown());
     }
     IEnumerator CoolDown()
