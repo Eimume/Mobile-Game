@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Ene_closeCom : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
     public int damage = 10;
     public float TimeHitCoolDown;
     private bool canHit = true;
@@ -11,7 +11,7 @@ public class Ene_closeCom : MonoBehaviour
 
 void Start ()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     
@@ -38,11 +38,11 @@ void Start ()
         }
 
     }
-    private void OnTriggerEnter2D(Collider2D other)
+     private void OnTriggerEnter2D(Collider2D other)
     {
        if (other.CompareTag("Player"))
         {
-            player = other.gameObject.transform; // Store the player reference
+            player = other.gameObject; // Store the player reference
         }
     }
     private void OnTriggerStay2D(Collider2D other)

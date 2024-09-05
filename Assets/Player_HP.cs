@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player_HP : MonoBehaviour
 {
-    public int maxHp;
+    public int maxHp = 100;
 
     private int currentHp;
     void Start()
