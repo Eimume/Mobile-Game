@@ -11,19 +11,25 @@ public class EnemyAIShooter : MonoBehaviour
     private AstarPathfinding pathfinding; // Reference to your A* pathfinding script
     private bool isFollowingPlayer = false; // Is the enemy following the player?
     private EnemyShooter enemyShooter; // Reference to the EnemyShooter component
+    
+
+    [Header("Dependencies")]
+    [SerializeField] Animator anim;
+    [SerializeField] SpriteRenderer _spriteRenderer;
 
     void Start()
     {
         pathfinding = GetComponent<AstarPathfinding>();
         enemyShooter = GetComponent<EnemyShooter>(); // Get the shooter component
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer < detectionRadius)
+        if (distanceToPlayer <= detectionRadius)
         {
             enemyShooter.EnableShooting(true); // Enable shooting if the player is inside detection radius
         }
@@ -33,15 +39,19 @@ public class EnemyAIShooter : MonoBehaviour
         }
 
         // If player is within detection range, start following
-         if (distanceToPlayer < detectionRadius && distanceToPlayer > stoppingDistance)
+         if (distanceToPlayer < detectionRadius && distanceToPlayer >= stoppingDistance)
         {
             isFollowingPlayer = true;
+            anim.SetBool("isWalk", true);
+            anim.SetBool("isWalkBack", false);
             pathfinding.FollowPlayerPath();
             
         }
-        else if (distanceToPlayer <= stoppingDistance) 
+        else if (distanceToPlayer < stoppingDistance) 
         {
             isFollowingPlayer = false;
+            anim.SetBool("isWalk", true);
+            anim.SetBool("isWalkBack", true);
             RetreatFromPlayer(); // Start retreating when too close
             
         }
@@ -49,6 +59,8 @@ public class EnemyAIShooter : MonoBehaviour
         {
             isFollowingPlayer = false;
             pathfinding.StopMoving(); // Stop moving when out of range
+            anim.SetBool("isWalk", false);
+            anim.SetBool("isWalkBack", false);
             
         }
         
@@ -56,10 +68,7 @@ public class EnemyAIShooter : MonoBehaviour
     
     void RetreatFromPlayer()
     {
-        // Calculate the direction away from the player
         Vector2 directionAwayFromPlayer = (transform.position - player.position).normalized;
-
-        // Move the enemy in the opposite direction from the player at a slower speed
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + directionAwayFromPlayer, retreatSpeed * Time.deltaTime);
     }
 

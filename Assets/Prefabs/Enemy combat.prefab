@@ -357,7 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6260414330616120392}
-  - component: {fileID: 9116461201451763261}
+  - component: {fileID: 1071450528461044770}
   m_Layer: 0
   m_Name: enemy_test
   m_TagString: Untagged
@@ -380,7 +380,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1435978295548370034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9116461201451763261
+--- !u!212 &1071450528461044770
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

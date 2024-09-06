@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7, y: -2.8, z: 1.126409}
-  m_LocalScale: {x: 7.0736127, y: 7.0736127, z: 7.0736127}
+  m_LocalScale: {x: -0.16915, y: 0.16915, z: 0.16915}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 167678220780676206}
@@ -160,8 +160,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.029929608, y: -0.04634686}
-  m_Radius: 0.07107811
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.06
 --- !u!114 &3905112973938022089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   detectionRadius: 6.13
   stoppingDistance: 2.31
   retreatSpeed: 2
+  anim: {fileID: 0}
 --- !u!1 &6215744722106486979
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8094493918081229284}
-  - component: {fileID: 4602407357992450731}
+  - component: {fileID: 8814064760288600491}
   m_Layer: 0
   m_Name: enemy_test
   m_TagString: Untagged
@@ -242,7 +243,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 167678220780676206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4602407357992450731
+--- !u!212 &8814064760288600491
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,12 +287,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -574704541, guid: b98b3abfe2888ca4180d0b23e59d37d8, type: 3}
+  m_Sprite: {fileID: 1408737593667526469, guid: 03aada6fe5d70774ca206f7700da2c24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.22, y: 0.24}
+  m_Size: {x: 0.8125, y: 1.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

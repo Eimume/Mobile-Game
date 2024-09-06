@@ -1,64 +1,55 @@
 fileFormatVersion: 2
-guid: b98b3abfe2888ca4180d0b23e59d37d8
+guid: 0ca6445c2cbb05644a5582540c995c9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -123710170459118262
-    second: enemy_orange_spritesheet_0
+      213: -4686098483681749477
+    second: enemy_watermelon_spritesheet_0
   - first:
-      213: 4050885506196980618
-    second: enemy_orange_spritesheet_1
+      213: 1868970783253663857
+    second: enemy_watermelon_spritesheet_1
   - first:
-      213: -8332631096258201813
-    second: enemy_orange_spritesheet_2
+      213: -8315696651480886389
+    second: enemy_watermelon_spritesheet_2
   - first:
-      213: 97490341933581680
-    second: enemy_orange_spritesheet_3
+      213: 3946136749789011096
+    second: enemy_watermelon_spritesheet_3
   - first:
-      213: -335062699409796342
-    second: enemy_orange_spritesheet_4
+      213: 363225075629110286
+    second: enemy_watermelon_spritesheet_4
   - first:
-      213: 6506585700215130673
-    second: enemy_orange_spritesheet_5
+      213: -2558171460744427254
+    second: enemy_watermelon_spritesheet_5
   - first:
-      213: -5369099639321923444
-    second: enemy_orange_spritesheet_6
+      213: 6899593672511525171
+    second: enemy_watermelon_spritesheet_6
   - first:
-      213: -3380997748481016663
-    second: enemy_orange_spritesheet_7
+      213: -1814452742392159201
+    second: enemy_watermelon_spritesheet_7
   - first:
-      213: 7409819816089536543
-    second: enemy_orange_spritesheet_8
+      213: 7420251829656197102
+    second: enemy_watermelon_spritesheet_8
   - first:
-      213: -3576209646499068148
-    second: enemy_orange_spritesheet_9
+      213: -2892716076126846055
+    second: enemy_watermelon_spritesheet_9
   - first:
-      213: 1829955766726763836
-    second: enemy_orange_spritesheet_10
+      213: -280113208364818737
+    second: enemy_watermelon_spritesheet_10
   - first:
-      213: -8021520344674222472
-    second: enemy_orange_spritesheet_11
+      213: -8943183590700900116
+    second: enemy_watermelon_spritesheet_11
   - first:
-      213: -4045973190699835738
-    second: enemy_orange_spritesheet_12
+      213: 7213174139927227323
+    second: enemy_watermelon_spritesheet_12
   - first:
-      213: -2048752608895440075
-    second: enemy_orange_spritesheet_13
+      213: 3196902119605990527
+    second: enemy_watermelon_spritesheet_13
   - first:
-      213: -2267607163933413704
-    second: enemy_orange_spritesheet_14
+      213: -5595593921545247516
+    second: enemy_watermelon_spritesheet_14
   - first:
-      213: 1966466219726119477
-    second: enemy_orange_spritesheet_15
-  - first:
-      213: -1734333746099244929
-    second: enemy_orange_spritesheet_16
-  - first:
-      213: 8807006015200197375
-    second: enemy_orange_spritesheet_17
-  - first:
-      213: -8056366188660662455
-    second: enemy_orange_spritesheet_18
+      213: 496611972382846654
+    second: enemy_watermelon_spritesheet_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,419 +145,353 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_0
+      name: enemy_watermelon_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 22
-        height: 24
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc9dc22c25825ac4c8ff738443ac0d2d
-      internalID: -574704541
+      spriteID: b1617a1d142a7feb0800000000000000
+      internalID: -4686098483681749477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_1
+      name: enemy_watermelon_spritesheet_1
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 22
-        height: 25
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 91a40f3e49937b848a4a864b6681dd42
-      internalID: 1705271383
+      spriteID: 1701b6f660befe910800000000000000
+      internalID: 1868970783253663857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_2
+      name: enemy_watermelon_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 96
-        width: 21
-        height: 26
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4b2730153eeb8074bbca897f21f51871
-      internalID: -1462779982
+      spriteID: b83939434f5b89c80800000000000000
+      internalID: -8315696651480886389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_3
+      name: enemy_watermelon_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 96
-        width: 21
-        height: 25
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 617727af021cd4c4bb031fdb2bd11a56
-      internalID: -1238568245
+      spriteID: 89cd946677e73c630800000000000000
+      internalID: 3946136749789011096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_4
+      name: enemy_watermelon_spritesheet_4
       rect:
         serializedVersion: 2
         x: 96
         y: 96
-        width: 22
-        height: 23
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e3a97ad9f10c4174b8e72b14d1d42614
-      internalID: -2086940661
+      spriteID: e043366284f6a0500800000000000000
+      internalID: 363225075629110286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 22
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34705af63874f0e48ad692215cdc0ed5
-      internalID: -321131191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_spritesheet_6
+      name: enemy_watermelon_spritesheet_5
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 22
-        height: 25
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e4dbf2df9a5fd934dbd5046315b102ed
-      internalID: 1923168327
+      spriteID: a0949c73c9c8f7cd0800000000000000
+      internalID: -2558171460744427254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_7
+      name: enemy_watermelon_spritesheet_6
       rect:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 22
-        height: 26
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 701b7ca30b11b854ea7bef2479ae95e9
-      internalID: 1381376602
+      spriteID: 3311598b3e740cf50800000000000000
+      internalID: 6899593672511525171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_8
+      name: enemy_watermelon_spritesheet_7
       rect:
         serializedVersion: 2
         x: 64
         y: 64
-        width: 22
-        height: 26
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a06712b33fd7aac438952b72ec4a2c88
-      internalID: -1293234072
+      spriteID: f146bfb18d4c1d6e0800000000000000
+      internalID: -1814452742392159201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_9
+      name: enemy_watermelon_spritesheet_8
       rect:
         serializedVersion: 2
         x: 96
         y: 64
-        width: 22
-        height: 25
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e21c7d732269e594baf38e3806b443e0
-      internalID: 1055559651
+      spriteID: ee7999299b70af660800000000000000
+      internalID: 7420251829656197102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_10
+      name: enemy_watermelon_spritesheet_9
       rect:
         serializedVersion: 2
         x: 128
         y: 64
-        width: 22
-        height: 24
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 920ff7e0930f311498084050b3f2b7f1
-      internalID: 494625802
+      spriteID: 993c5661e020bd7d0800000000000000
+      internalID: -2892716076126846055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_11
+      name: enemy_watermelon_spritesheet_10
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 22
-        height: 24
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2e2ecad5cca9e1049948928e833dc0af
-      internalID: -904994365
+      spriteID: fce15866586dc1cf0800000000000000
+      internalID: -280113208364818737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_12
+      name: enemy_watermelon_spritesheet_11
       rect:
         serializedVersion: 2
         x: 32
         y: 32
-        width: 23
-        height: 23
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4ae8416cd4f845846b91d01199f7785d
-      internalID: 1378140622
+      spriteID: ce0ab2348ed63e380800000000000000
+      internalID: -8943183590700900116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_13
+      name: enemy_watermelon_spritesheet_12
       rect:
         serializedVersion: 2
         x: 64
         y: 32
-        width: 21
-        height: 25
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b1da79f913d5cde4bbdfb2820b0ea787
-      internalID: 1057735161
+      spriteID: bbb6569c9a75a1460800000000000000
+      internalID: 7213174139927227323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_14
+      name: enemy_watermelon_spritesheet_13
       rect:
         serializedVersion: 2
         x: 96
         y: 32
-        width: 21
-        height: 25
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b53673f831248294baa8bd0931c052b5
-      internalID: 839912280
+      spriteID: f74fec43a8dad5c20800000000000000
+      internalID: 3196902119605990527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_15
+      name: enemy_watermelon_spritesheet_14
       rect:
         serializedVersion: 2
         x: 128
         y: 32
-        width: 32
-        height: 23
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: de034090e4e3eed4f95b3f88a313f802
-      internalID: -1618822386
+      spriteID: 4e4e5fe99f47852b0800000000000000
+      internalID: -5595593921545247516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_16
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c41feffa08d650343bbe03fd10f41cc7
-      internalID: -598278894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_spritesheet_17
+      name: enemy_watermelon_spritesheet_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 21
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3b97eebd6d138e744aefad87d93ddaad
-      internalID: 1814435912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 0
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac422f2ce488acb4f83d2e7ebae6c606
-      internalID: -991956004
+      spriteID: ebee51d25f154e600800000000000000
+      internalID: 496611972382846654
       vertices: []
       indices: 
       edges: []
@@ -575,7 +500,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dbb42fe7e1989c242ac22dedf72d7467
+    spriteID: b6fda68a816e5a649bc87e93cfa3dc28
     internalID: 0
     vertices: []
     indices: 
@@ -583,25 +508,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy_orange_spritesheet_0: -574704541
-      enemy_orange_spritesheet_1: 1705271383
-      enemy_orange_spritesheet_10: 494625802
-      enemy_orange_spritesheet_11: -904994365
-      enemy_orange_spritesheet_12: 1378140622
-      enemy_orange_spritesheet_13: 1057735161
-      enemy_orange_spritesheet_14: 839912280
-      enemy_orange_spritesheet_15: -1618822386
-      enemy_orange_spritesheet_16: -598278894
-      enemy_orange_spritesheet_17: 1814435912
-      enemy_orange_spritesheet_18: -991956004
-      enemy_orange_spritesheet_2: -1462779982
-      enemy_orange_spritesheet_3: -1238568245
-      enemy_orange_spritesheet_4: -2086940661
-      enemy_orange_spritesheet_5: -321131191
-      enemy_orange_spritesheet_6: 1923168327
-      enemy_orange_spritesheet_7: 1381376602
-      enemy_orange_spritesheet_8: -1293234072
-      enemy_orange_spritesheet_9: 1055559651
+      enemy_watermelon_spritesheet_0: -4686098483681749477
+      enemy_watermelon_spritesheet_1: 1868970783253663857
+      enemy_watermelon_spritesheet_10: -280113208364818737
+      enemy_watermelon_spritesheet_11: -8943183590700900116
+      enemy_watermelon_spritesheet_12: 7213174139927227323
+      enemy_watermelon_spritesheet_13: 3196902119605990527
+      enemy_watermelon_spritesheet_14: -5595593921545247516
+      enemy_watermelon_spritesheet_15: 496611972382846654
+      enemy_watermelon_spritesheet_2: -8315696651480886389
+      enemy_watermelon_spritesheet_3: 3946136749789011096
+      enemy_watermelon_spritesheet_4: 363225075629110286
+      enemy_watermelon_spritesheet_5: -2558171460744427254
+      enemy_watermelon_spritesheet_6: 6899593672511525171
+      enemy_watermelon_spritesheet_7: -1814452742392159201
+      enemy_watermelon_spritesheet_8: 7420251829656197102
+      enemy_watermelon_spritesheet_9: -2892716076126846055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
