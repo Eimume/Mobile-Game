@@ -10,7 +10,9 @@ public class EnemyShooter : MonoBehaviour
     private bool canShoot = false;
     private GameObject player; // Reference to the player object
     private float shootingTimer = 0f; // Timer for tracking shooting intervals
-    private bool hasShot = false;
+    /// <summary>
+    /// private bool hasShot = false;
+    /// </summary>
     
 
     [Header("Dependencies")]
@@ -21,31 +23,32 @@ public class EnemyShooter : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        shootingTimer = shootingInterval;
+        //shootingTimer = shootingInterval;
     }
 
     void Update()
     {
-       
+       shootingTimer += Time.deltaTime;
 
-        if (hasShot)
+        if (canShoot)
         {       
-            shootingTimer -= Time.deltaTime;
-
         // If the timer reaches zero, shoot a bullet
-            if (shootingTimer <= 0f)
+            if (shootingTimer >= shootingInterval)
             {
-                hasShot = false;
-                shootingTimer = shootingInterval; // Reset the timer
+                shootingTimer = 0f;
+                anim.SetTrigger("Shoot");
+                Shoot();                
+                //hasShot = false;
+                //shootingTimer = shootingInterval; // Reset the timer
                 
             }
         }
-        
+        /*
         if (canShoot && !hasShot)
         {
             anim.SetTrigger("Shoot");// Trigger the shooting animation
             hasShot = true;          // Mark that we have shot
-        } 
+        } */
     }
 
     public void Shoot()

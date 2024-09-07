@@ -39,7 +39,7 @@ public class EnemyAIShooter : MonoBehaviour
         }
 
         // If player is within detection range, start following
-         if (distanceToPlayer < detectionRadius && distanceToPlayer >= stoppingDistance)
+         if (distanceToPlayer < detectionRadius && distanceToPlayer > stoppingDistance)
         {
             isFollowingPlayer = true;
             anim.SetBool("isWalk", true);
@@ -47,7 +47,7 @@ public class EnemyAIShooter : MonoBehaviour
             pathfinding.FollowPlayerPath();
             
         }
-        else if (distanceToPlayer < stoppingDistance) 
+        else if (distanceToPlayer <= stoppingDistance) 
         {
             isFollowingPlayer = false;
             anim.SetBool("isWalk", true);

@@ -47,9 +47,9 @@ GameObject:
   - component: {fileID: 3905112973938022089}
   - component: {fileID: 5503203742494494547}
   - component: {fileID: 4506438174475936418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy Shooter
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,6 +178,8 @@ MonoBehaviour:
   firePoint: {fileID: 3648893505247350866}
   shootingInterval: 2
   bulletSpeed: 5
+  anim: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
 --- !u!114 &5503203742494494547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +213,7 @@ MonoBehaviour:
   stoppingDistance: 2.31
   retreatSpeed: 2
   anim: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
 --- !u!1 &6215744722106486979
 GameObject:
   m_ObjectHideFlags: 0
