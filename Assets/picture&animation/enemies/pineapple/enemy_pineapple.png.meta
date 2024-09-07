@@ -1,61 +1,58 @@
 fileFormatVersion: 2
-guid: 64a1e0f778c943b4d9519996b8cb339b
+guid: c3fb6c47519991a4d8960f1307afe329
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8150277545569296290
-    second: enemy_orange_0
+      213: -1706372971192539905
+    second: enemy_pineapple_0
   - first:
-      213: 1421538948756314823
-    second: enemy_orange_1
+      213: -5807446781743383366
+    second: enemy_pineapple_1
   - first:
-      213: 6555704421382324817
-    second: enemy_orange_2
+      213: 7733896940031471491
+    second: enemy_pineapple_2
   - first:
-      213: 3875382055216199435
-    second: enemy_orange_3
+      213: -2366948622222386932
+    second: enemy_pineapple_3
   - first:
-      213: 614302840893487017
-    second: enemy_orange_4
+      213: -4404872060434307038
+    second: enemy_pineapple_4
   - first:
-      213: -5280698896284401657
-    second: enemy_orange_5
+      213: -7363470450893557463
+    second: enemy_pineapple_5
   - first:
-      213: -5537543540282777049
-    second: enemy_orange_6
+      213: -8971932386382274131
+    second: enemy_pineapple_6
   - first:
-      213: -3895822057473871765
-    second: enemy_orange_7
+      213: 1418592400023973340
+    second: enemy_pineapple_7
   - first:
-      213: -6952602249444975806
-    second: enemy_orange_8
+      213: 2116482611166698508
+    second: enemy_pineapple_8
   - first:
-      213: -2588829654280820201
-    second: enemy_orange_9
+      213: -2523107743986205059
+    second: enemy_pineapple_9
   - first:
-      213: 1481322551663286669
-    second: enemy_orange_10
+      213: -6724561649961886005
+    second: enemy_pineapple_10
   - first:
-      213: 4017630235809213241
-    second: enemy_orange_11
+      213: 366609905039855657
+    second: enemy_pineapple_11
   - first:
-      213: 74455135105483473
-    second: enemy_orange_12
+      213: 5175351834420173321
+    second: enemy_pineapple_12
   - first:
-      213: -6533571553699740479
-    second: enemy_orange_13
+      213: -3685847122573396915
+    second: enemy_pineapple_13
   - first:
-      213: -1896245685736589480
-    second: enemy_orange_14
+      213: -4125463663723389137
+    second: enemy_pineapple_14
   - first:
-      213: -2016387011405137602
-    second: enemy_orange_15
+      213: -2368136202662240863
+    second: enemy_pineapple_15
   - first:
-      213: 5164375380372742779
-    second: enemy_orange_16
-  - first:
-      213: 975833211682603742
-    second: enemy_orange_17
+      213: 1047484133523262163
+    second: enemy_pineapple_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -151,29 +148,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_orange_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.35, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e50ef7b11c564ee80800000000000000
-      internalID: -8150277545569296290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_1
+      name: enemy_pineapple_0
       rect:
         serializedVersion: 2
         x: 0
@@ -181,109 +156,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ca900b64225ab310800000000000000
-      internalID: 1421538948756314823
+      spriteID: ff4adbdc2deb158e0800000000000000
+      internalID: -1706372971192539905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.35, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15283f8007a8afa50800000000000000
-      internalID: 6555704421382324817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_3
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.35, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b07b512527f18c530800000000000000
-      internalID: 3875382055216199435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.35, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a738f7dd21768800800000000000000
-      internalID: 614302840893487017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.35, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 700cb29055037b6b0800000000000000
-      internalID: -5280698896284401657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_6
+      name: enemy_pineapple_1
       rect:
         serializedVersion: 2
         x: 0
@@ -291,21 +178,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 722af214d71b623b0800000000000000
-      internalID: -5537543540282777049
+      spriteID: abc3332dbedc76fa0800000000000000
+      internalID: -5807446781743383366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_7
+      name: enemy_pineapple_2
       rect:
         serializedVersion: 2
         x: 32
@@ -313,21 +200,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b60732cca724fe9c0800000000000000
-      internalID: -3895822057473871765
+      spriteID: 38f6e008a42545b60800000000000000
+      internalID: 7733896940031471491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_8
+      name: enemy_pineapple_3
       rect:
         serializedVersion: 2
         x: 64
@@ -335,21 +222,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24b10413715638f90800000000000000
-      internalID: -6952602249444975806
+      spriteID: c0995dac4c8e62fd0800000000000000
+      internalID: -2366948622222386932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_9
+      name: enemy_pineapple_4
       rect:
         serializedVersion: 2
         x: 96
@@ -357,43 +244,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71a28984521a21cd0800000000000000
-      internalID: -2588829654280820201
+      spriteID: 22825c4f230ced2c0800000000000000
+      internalID: -4404872060434307038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.35, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d895aa92307be8410800000000000000
-      internalID: 1481322551663286669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_11
+      name: enemy_pineapple_5
       rect:
         serializedVersion: 2
         x: 0
@@ -401,21 +266,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93be644c96d71c730800000000000000
-      internalID: 4017630235809213241
+      spriteID: 921776463a2bfc990800000000000000
+      internalID: -7363470450893557463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_12
+      name: enemy_pineapple_6
       rect:
         serializedVersion: 2
         x: 32
@@ -423,21 +288,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d28aa70d84880100800000000000000
-      internalID: 74455135105483473
+      spriteID: da1acd8a70b4d7380800000000000000
+      internalID: -8971932386382274131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_13
+      name: enemy_pineapple_7
       rect:
         serializedVersion: 2
         x: 64
@@ -445,21 +310,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c4412bc9471455a0800000000000000
-      internalID: -6533571553699740479
+      spriteID: cdd6f74954adfa310800000000000000
+      internalID: 1418592400023973340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_14
+      name: enemy_pineapple_8
       rect:
         serializedVersion: 2
         x: 96
@@ -467,21 +332,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 857bdc6789e2fa5e0800000000000000
-      internalID: -1896245685736589480
+      spriteID: c0cd1e3a8b14f5d10800000000000000
+      internalID: 2116482611166698508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_15
+      name: enemy_pineapple_9
       rect:
         serializedVersion: 2
         x: 128
@@ -489,21 +354,21 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e393c7742ba5404e0800000000000000
-      internalID: -2016387011405137602
+      spriteID: d7e3aa5ffde1cfcd0800000000000000
+      internalID: -2523107743986205059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_16
+      name: enemy_pineapple_10
       rect:
         serializedVersion: 2
         x: 160
@@ -511,21 +376,131 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b72e3e1eb0c8ba740800000000000000
-      internalID: 5164375380372742779
+      spriteID: bce9ecfbece8da2a0800000000000000
+      internalID: -6724561649961886005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_17
+      name: enemy_pineapple_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9205a0924c5761500800000000000000
+      internalID: 366609905039855657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_pineapple_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ad74eb21b82d740800000000000000
+      internalID: 5175351834420173321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_pineapple_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44fd9a029d39dcc0800000000000000
+      internalID: -3685847122573396915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_pineapple_14
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f5cfdc7a86fb6c0800000000000000
+      internalID: -4125463663723389137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_pineapple_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad139caba0b22fd0800000000000000
+      internalID: -2368136202662240863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_pineapple_16
       rect:
         serializedVersion: 2
         x: 0
@@ -533,15 +508,15 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.35, y: 0.4}
+      pivot: {x: 0.25, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed2ce56c22bda8d00800000000000000
-      internalID: 975833211682603742
+      spriteID: 3da03860549698e00800000000000000
+      internalID: 1047484133523262163
       vertices: []
       indices: 
       edges: []
@@ -550,7 +525,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1d363d67ad0d52f499fc59506a7ca08a
+    spriteID: e332bb16369ed604595ece941dc08889
     internalID: 0
     vertices: []
     indices: 
@@ -558,24 +533,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy_orange_0: -8150277545569296290
-      enemy_orange_1: 1421538948756314823
-      enemy_orange_10: 1481322551663286669
-      enemy_orange_11: 4017630235809213241
-      enemy_orange_12: 74455135105483473
-      enemy_orange_13: -6533571553699740479
-      enemy_orange_14: -1896245685736589480
-      enemy_orange_15: -2016387011405137602
-      enemy_orange_16: 5164375380372742779
-      enemy_orange_17: 975833211682603742
-      enemy_orange_2: 6555704421382324817
-      enemy_orange_3: 3875382055216199435
-      enemy_orange_4: 614302840893487017
-      enemy_orange_5: -5280698896284401657
-      enemy_orange_6: -5537543540282777049
-      enemy_orange_7: -3895822057473871765
-      enemy_orange_8: -6952602249444975806
-      enemy_orange_9: -2588829654280820201
+      enemy_pineapple_0: -1706372971192539905
+      enemy_pineapple_1: -5807446781743383366
+      enemy_pineapple_10: -6724561649961886005
+      enemy_pineapple_11: 366609905039855657
+      enemy_pineapple_12: 5175351834420173321
+      enemy_pineapple_13: -3685847122573396915
+      enemy_pineapple_14: -4125463663723389137
+      enemy_pineapple_15: -2368136202662240863
+      enemy_pineapple_16: 1047484133523262163
+      enemy_pineapple_2: 7733896940031471491
+      enemy_pineapple_3: -2366948622222386932
+      enemy_pineapple_4: -4404872060434307038
+      enemy_pineapple_5: -7363470450893557463
+      enemy_pineapple_6: -8971932386382274131
+      enemy_pineapple_7: 1418592400023973340
+      enemy_pineapple_8: 2116482611166698508
+      enemy_pineapple_9: -2523107743986205059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
