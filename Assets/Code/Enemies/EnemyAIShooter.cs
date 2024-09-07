@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyAIShooter : MonoBehaviour
 {
     public Transform player; // Reference to the player's position
+    //public float Enspeed = 10f;
     public float detectionRadius = 10f; // Distance for enemy to start following
     public float stoppingDistance = 5f; // Distance from player where enemy will stop moving
     public float retreatSpeed = 2f; // Speed at which the enemy retreats when player is too close
@@ -32,6 +33,7 @@ public class EnemyAIShooter : MonoBehaviour
         if (distanceToPlayer <= detectionRadius)
         {
             enemyShooter.EnableShooting(true); // Enable shooting if the player is inside detection radius
+            //anim.SetTrigger("Shoot");
         }
         else
         {
@@ -42,12 +44,13 @@ public class EnemyAIShooter : MonoBehaviour
          if (distanceToPlayer < detectionRadius && distanceToPlayer > stoppingDistance)
         {
             isFollowingPlayer = true;
+            //pathfinding.speed = Enspeed;
             anim.SetBool("isWalk", true);
             anim.SetBool("isWalkBack", false);
             pathfinding.FollowPlayerPath();
             
         }
-        else if (distanceToPlayer <= stoppingDistance) 
+        else if (distanceToPlayer < stoppingDistance) 
         {
             isFollowingPlayer = false;
             anim.SetBool("isWalk", true);
@@ -72,7 +75,6 @@ public class EnemyAIShooter : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + directionAwayFromPlayer, retreatSpeed * Time.deltaTime);
     }
 
-    // Optional: Draw detection range and stopping distance in the editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

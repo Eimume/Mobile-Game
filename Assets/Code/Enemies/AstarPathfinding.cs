@@ -5,7 +5,7 @@ public class AstarPathfinding : MonoBehaviour
 {
     public Transform target;
 
-    public float speed = 10f;
+    public float speed = 400f;
     public float nextWaypointDistance = 3f;
     //public float lineMove;
 
@@ -86,6 +86,7 @@ public class AstarPathfinding : MonoBehaviour
             enemyGPX.localScale = new Vector3(1f, 1f, 1f);
         }
     }
+
      public void StopMoving()
     {
         isMoving = false; // Set the flag to stop movement
