@@ -77,14 +77,14 @@ public class AstarPathfinding : MonoBehaviour
             currentWaypoint++;
         }
 
-        if (force.x >= 0.01f)
+        /*if (force.x >= 0.01f)
         {
             enemyGPX.localScale = new Vector3(-1f, 1f, 1f);
         }
         else if (force.x <= -0.01f)
         {
             enemyGPX.localScale = new Vector3(1f, 1f, 1f);
-        }
+        }*/
     }
 
      public void StopMoving()

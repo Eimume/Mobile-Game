@@ -15,11 +15,19 @@ public class EnemyAIShooter : MonoBehaviour
     
 
     [Header("Dependencies")]
+    Rigidbody2D rb;
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer _spriteRenderer;
 
+    #region Direction
+    private enum Directions { Left, Right}
+    private Vector2 _moveDir = Vector2.zero;
+    private Directions _faceDirection = Directions.Right;
+    #endregion
+
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         pathfinding = GetComponent<AstarPathfinding>();
         enemyShooter = GetComponent<EnemyShooter>(); // Get the shooter component
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -66,6 +74,7 @@ public class EnemyAIShooter : MonoBehaviour
             anim.SetBool("isWalkBack", false);
             
         }
+        CalculateFacingDirection();
         
     }
     
@@ -73,6 +82,8 @@ public class EnemyAIShooter : MonoBehaviour
     {
         Vector2 directionAwayFromPlayer = (transform.position - player.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + directionAwayFromPlayer, retreatSpeed * Time.deltaTime);
+
+        CalculateFacingDirection();
     }
 
     private void OnDrawGizmosSelected()
@@ -81,5 +92,22 @@ public class EnemyAIShooter : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, stoppingDistance);
+    }
+
+    private void CalculateFacingDirection()
+    {
+        if (player != null)
+        {
+            // If player is on the left of the enemy, flip the sprite (scale X to -1), otherwise keep it (scale X to 1)
+            if (player.position.x < transform.position.x)
+            {
+                _spriteRenderer.flipX = true;  // Flip sprite
+            }
+            else
+            {
+                _spriteRenderer.flipX = false;  // Don't flip sprite
+            }
+        }
+
     }
 }
