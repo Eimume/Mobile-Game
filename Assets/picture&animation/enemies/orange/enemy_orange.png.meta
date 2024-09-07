@@ -1,64 +1,61 @@
 fileFormatVersion: 2
-guid: b98b3abfe2888ca4180d0b23e59d37d8
+guid: 64a1e0f778c943b4d9519996b8cb339b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -123710170459118262
-    second: enemy_orange_spritesheet_0
+      213: -8150277545569296290
+    second: enemy_orange_0
   - first:
-      213: 4050885506196980618
-    second: enemy_orange_spritesheet_1
+      213: 1421538948756314823
+    second: enemy_orange_1
   - first:
-      213: -8332631096258201813
-    second: enemy_orange_spritesheet_2
+      213: 6555704421382324817
+    second: enemy_orange_2
   - first:
-      213: 97490341933581680
-    second: enemy_orange_spritesheet_3
+      213: 3875382055216199435
+    second: enemy_orange_3
   - first:
-      213: -335062699409796342
-    second: enemy_orange_spritesheet_4
+      213: 614302840893487017
+    second: enemy_orange_4
   - first:
-      213: 6506585700215130673
-    second: enemy_orange_spritesheet_5
+      213: -5280698896284401657
+    second: enemy_orange_5
   - first:
-      213: -5369099639321923444
-    second: enemy_orange_spritesheet_6
+      213: -5537543540282777049
+    second: enemy_orange_6
   - first:
-      213: -3380997748481016663
-    second: enemy_orange_spritesheet_7
+      213: -3895822057473871765
+    second: enemy_orange_7
   - first:
-      213: 7409819816089536543
-    second: enemy_orange_spritesheet_8
+      213: -6952602249444975806
+    second: enemy_orange_8
   - first:
-      213: -3576209646499068148
-    second: enemy_orange_spritesheet_9
+      213: -2588829654280820201
+    second: enemy_orange_9
   - first:
-      213: 1829955766726763836
-    second: enemy_orange_spritesheet_10
+      213: 1481322551663286669
+    second: enemy_orange_10
   - first:
-      213: -8021520344674222472
-    second: enemy_orange_spritesheet_11
+      213: 4017630235809213241
+    second: enemy_orange_11
   - first:
-      213: -4045973190699835738
-    second: enemy_orange_spritesheet_12
+      213: 74455135105483473
+    second: enemy_orange_12
   - first:
-      213: -2048752608895440075
-    second: enemy_orange_spritesheet_13
+      213: -6533571553699740479
+    second: enemy_orange_13
   - first:
-      213: -2267607163933413704
-    second: enemy_orange_spritesheet_14
+      213: -1896245685736589480
+    second: enemy_orange_14
   - first:
-      213: 1966466219726119477
-    second: enemy_orange_spritesheet_15
+      213: -2016387011405137602
+    second: enemy_orange_15
   - first:
-      213: -1734333746099244929
-    second: enemy_orange_spritesheet_16
+      213: 5164375380372742779
+    second: enemy_orange_16
   - first:
-      213: 8807006015200197375
-    second: enemy_orange_spritesheet_17
-  - first:
-      213: -8056366188660662455
-    second: enemy_orange_spritesheet_18
+      213: 975833211682603742
+    second: enemy_orange_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +102,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,419 +151,397 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_0
+      name: enemy_orange_0
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 22
-        height: 24
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc9dc22c25825ac4c8ff738443ac0d2d
-      internalID: -574704541
+      spriteID: e50ef7b11c564ee80800000000000000
+      internalID: -8150277545569296290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_1
+      name: enemy_orange_1
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 22
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 91a40f3e49937b848a4a864b6681dd42
-      internalID: 1705271383
+      spriteID: 7ca900b64225ab310800000000000000
+      internalID: 1421538948756314823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_2
+      name: enemy_orange_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 96
-        width: 21
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4b2730153eeb8074bbca897f21f51871
-      internalID: -1462779982
+      spriteID: 15283f8007a8afa50800000000000000
+      internalID: 6555704421382324817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_3
+      name: enemy_orange_3
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 96
-        width: 21
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 617727af021cd4c4bb031fdb2bd11a56
-      internalID: -1238568245
+      spriteID: b07b512527f18c530800000000000000
+      internalID: 3875382055216199435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_4
+      name: enemy_orange_4
       rect:
         serializedVersion: 2
         x: 96
         y: 96
-        width: 22
-        height: 23
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e3a97ad9f10c4174b8e72b14d1d42614
-      internalID: -2086940661
+      spriteID: 9a738f7dd21768800800000000000000
+      internalID: 614302840893487017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_5
+      name: enemy_orange_5
       rect:
         serializedVersion: 2
         x: 128
         y: 96
-        width: 22
-        height: 24
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 34705af63874f0e48ad692215cdc0ed5
-      internalID: -321131191
+      spriteID: 700cb29055037b6b0800000000000000
+      internalID: -5280698896284401657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_6
+      name: enemy_orange_6
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 22
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e4dbf2df9a5fd934dbd5046315b102ed
-      internalID: 1923168327
+      spriteID: 722af214d71b623b0800000000000000
+      internalID: -5537543540282777049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_7
+      name: enemy_orange_7
       rect:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 22
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 701b7ca30b11b854ea7bef2479ae95e9
-      internalID: 1381376602
+      spriteID: b60732cca724fe9c0800000000000000
+      internalID: -3895822057473871765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_8
+      name: enemy_orange_8
       rect:
         serializedVersion: 2
         x: 64
         y: 64
-        width: 22
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a06712b33fd7aac438952b72ec4a2c88
-      internalID: -1293234072
+      spriteID: 24b10413715638f90800000000000000
+      internalID: -6952602249444975806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_9
+      name: enemy_orange_9
       rect:
         serializedVersion: 2
         x: 96
         y: 64
-        width: 22
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e21c7d732269e594baf38e3806b443e0
-      internalID: 1055559651
+      spriteID: 71a28984521a21cd0800000000000000
+      internalID: -2588829654280820201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_10
+      name: enemy_orange_10
       rect:
         serializedVersion: 2
         x: 128
         y: 64
-        width: 22
-        height: 24
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 920ff7e0930f311498084050b3f2b7f1
-      internalID: 494625802
+      spriteID: d895aa92307be8410800000000000000
+      internalID: 1481322551663286669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_11
+      name: enemy_orange_11
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 22
-        height: 24
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2e2ecad5cca9e1049948928e833dc0af
-      internalID: -904994365
+      spriteID: 93be644c96d71c730800000000000000
+      internalID: 4017630235809213241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_12
+      name: enemy_orange_12
       rect:
         serializedVersion: 2
         x: 32
         y: 32
-        width: 23
-        height: 23
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4ae8416cd4f845846b91d01199f7785d
-      internalID: 1378140622
+      spriteID: 1d28aa70d84880100800000000000000
+      internalID: 74455135105483473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_13
+      name: enemy_orange_13
       rect:
         serializedVersion: 2
         x: 64
         y: 32
-        width: 21
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b1da79f913d5cde4bbdfb2820b0ea787
-      internalID: 1057735161
+      spriteID: 1c4412bc9471455a0800000000000000
+      internalID: -6533571553699740479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_14
+      name: enemy_orange_14
       rect:
         serializedVersion: 2
         x: 96
         y: 32
-        width: 21
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b53673f831248294baa8bd0931c052b5
-      internalID: 839912280
+      spriteID: 857bdc6789e2fa5e0800000000000000
+      internalID: -1896245685736589480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_15
+      name: enemy_orange_15
       rect:
         serializedVersion: 2
         x: 128
         y: 32
         width: 32
-        height: 23
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: de034090e4e3eed4f95b3f88a313f802
-      internalID: -1618822386
+      spriteID: e393c7742ba5404e0800000000000000
+      internalID: -2016387011405137602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_16
+      name: enemy_orange_16
       rect:
         serializedVersion: 2
         x: 160
         y: 32
         width: 32
-        height: 21
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c41feffa08d650343bbe03fd10f41cc7
-      internalID: -598278894
+      spriteID: b72e3e1eb0c8ba740800000000000000
+      internalID: 5164375380372742779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_orange_spritesheet_17
+      name: enemy_orange_17
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 21
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3b97eebd6d138e744aefad87d93ddaad
-      internalID: 1814435912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_orange_spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 0
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac422f2ce488acb4f83d2e7ebae6c606
-      internalID: -991956004
+      spriteID: ed2ce56c22bda8d00800000000000000
+      internalID: 975833211682603742
       vertices: []
       indices: 
       edges: []
@@ -575,7 +550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dbb42fe7e1989c242ac22dedf72d7467
+    spriteID: 1d363d67ad0d52f499fc59506a7ca08a
     internalID: 0
     vertices: []
     indices: 
@@ -583,25 +558,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy_orange_spritesheet_0: -574704541
-      enemy_orange_spritesheet_1: 1705271383
-      enemy_orange_spritesheet_10: 494625802
-      enemy_orange_spritesheet_11: -904994365
-      enemy_orange_spritesheet_12: 1378140622
-      enemy_orange_spritesheet_13: 1057735161
-      enemy_orange_spritesheet_14: 839912280
-      enemy_orange_spritesheet_15: -1618822386
-      enemy_orange_spritesheet_16: -598278894
-      enemy_orange_spritesheet_17: 1814435912
-      enemy_orange_spritesheet_18: -991956004
-      enemy_orange_spritesheet_2: -1462779982
-      enemy_orange_spritesheet_3: -1238568245
-      enemy_orange_spritesheet_4: -2086940661
-      enemy_orange_spritesheet_5: -321131191
-      enemy_orange_spritesheet_6: 1923168327
-      enemy_orange_spritesheet_7: 1381376602
-      enemy_orange_spritesheet_8: -1293234072
-      enemy_orange_spritesheet_9: 1055559651
+      enemy_orange_0: -8150277545569296290
+      enemy_orange_1: 1421538948756314823
+      enemy_orange_10: 1481322551663286669
+      enemy_orange_11: 4017630235809213241
+      enemy_orange_12: 74455135105483473
+      enemy_orange_13: -6533571553699740479
+      enemy_orange_14: -1896245685736589480
+      enemy_orange_15: -2016387011405137602
+      enemy_orange_16: 5164375380372742779
+      enemy_orange_17: 975833211682603742
+      enemy_orange_2: 6555704421382324817
+      enemy_orange_3: 3875382055216199435
+      enemy_orange_4: 614302840893487017
+      enemy_orange_5: -5280698896284401657
+      enemy_orange_6: -5537543540282777049
+      enemy_orange_7: -3895822057473871765
+      enemy_orange_8: -6952602249444975806
+      enemy_orange_9: -2588829654280820201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

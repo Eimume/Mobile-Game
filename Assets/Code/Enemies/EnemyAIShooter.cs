@@ -18,12 +18,8 @@ public class EnemyAIShooter : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer _spriteRenderer;
+    //[SerializeField] Transform _transform;
 
-    #region Direction
-    private enum Directions { Left, Right}
-    private Vector2 _moveDir = Vector2.zero;
-    private Directions _faceDirection = Directions.Right;
-    #endregion
 
     void Start()
     {
@@ -56,6 +52,7 @@ public class EnemyAIShooter : MonoBehaviour
             anim.SetBool("isWalk", true);
             anim.SetBool("isWalkBack", false);
             pathfinding.FollowPlayerPath();
+            CalculateFacingDirection();
             
         }
         else if (distanceToPlayer < stoppingDistance) 
@@ -64,6 +61,7 @@ public class EnemyAIShooter : MonoBehaviour
             anim.SetBool("isWalk", true);
             anim.SetBool("isWalkBack", true);
             RetreatFromPlayer(); // Start retreating when too close
+            
             
         }
         else
@@ -74,7 +72,7 @@ public class EnemyAIShooter : MonoBehaviour
             anim.SetBool("isWalkBack", false);
             
         }
-        CalculateFacingDirection();
+        
         
     }
     

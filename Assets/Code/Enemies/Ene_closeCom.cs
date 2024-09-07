@@ -11,6 +11,9 @@ public class Ene_closeCom : MonoBehaviour
     private float cooldownTimer = 0f;
     private GameObject player;
 
+     [Header("Dependencies")]
+    [SerializeField] Animator anim;
+
 void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,6 +27,7 @@ void Start ()
             cooldownTimer -= Time.deltaTime;
             if (cooldownTimer <= 0f)
             {
+                anim.SetTrigger("attack");
                 canHit = true; // Reset the ability to attack
             }
         }

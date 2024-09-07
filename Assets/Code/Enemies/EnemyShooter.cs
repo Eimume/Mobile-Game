@@ -68,9 +68,6 @@ public class EnemyShooter : MonoBehaviour
     public void EnableShooting(bool value)
     {
         canShoot = value;  // Set whether shooting is allowed
-        /*if (!value)
-        {
-            anim.ResetTrigger("Shoot");  // Reset the shoot trigger if shooting is disabled
-        }*/
+
     }
 }

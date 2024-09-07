@@ -9,7 +9,7 @@ public class AstarPathfinding : MonoBehaviour
     public float nextWaypointDistance = 3f;
     //public float lineMove;
 
-    public Transform enemyGPX;
+    //public Transform enemyGPX;
 
     Path path;
     int currentWaypoint = 0;
