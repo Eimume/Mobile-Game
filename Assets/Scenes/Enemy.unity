@@ -183,6 +183,41 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bbcab5ea37ac8b47b5b973ae2bccd8a, type: 3}
+--- !u!1 &117248087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117248088}
+  m_Layer: 6
+  m_Name: Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &117248088
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117248087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2661715290510572289}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.413}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &495848581
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 620065558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.31, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -971,6 +1006,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 620065559}
+  - {fileID: 1949056634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1757006071
@@ -1089,8 +1125,61 @@ MonoBehaviour:
   weaponHolder: {fileID: 620065559}
   gunTransform: {fileID: 620065559}
   enemy: {fileID: 0}
-  gun: {fileID: 11400000, guid: f82010b5756c6114fb4cb3e9bf57b216, type: 2}
-  sword: {fileID: 11400000, guid: 6798bfc41f1b6fa4499a63d45ec4a7c0, type: 2}
+  hand: {fileID: 0}
+--- !u!1 &1949056633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949056634}
+  m_Layer: 0
+  m_Name: Gun Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949056634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949056633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1757006070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2050962625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8441368283915570871, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
+  m_PrefabInstance: {fileID: 1163030013208594146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050962628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050962625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717750b88d65f214fb36571df4e1e091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponToEquip: {fileID: 0}
+--- !u!1 &51868558404719472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4599265516676585656, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
+  m_PrefabInstance: {fileID: 6438642773395629602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1163030013208594146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1146,7 +1235,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8441368283915570871, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2050962628}
   m_SourcePrefab: {fileID: 100100000, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
 --- !u!1001 &1405746045432330488
 PrefabInstance:
@@ -1209,6 +1301,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f6e4cd6518181c4fbc3a016a4803781, type: 3}
+--- !u!224 &2661715290510572289 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1863122643204112835, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
+  m_PrefabInstance: {fileID: 6438642773395629602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5000755587301873196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1486,7 +1583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4599265516676585656, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548368757048707331, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
       propertyPath: m_Size.y
@@ -1494,9 +1591,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1863122643204112835, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 117248088}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4599265516676585656, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9201519087559354739}
   m_SourcePrefab: {fileID: 100100000, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
+--- !u!114 &9201519087559354739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51868558404719472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333e22b9872445c4a92806a732b1a081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: {fileID: 11400000, guid: 6798bfc41f1b6fa4499a63d45ec4a7c0, type: 2}
+  weaponHolder: {fileID: 117248088}
+  gunTransform: {fileID: 117248088}
+  enemy: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

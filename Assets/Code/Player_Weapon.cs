@@ -9,12 +9,14 @@ public class Player_Weapon : MonoBehaviour
 
     private GameObject equippedWeaponInstance;
 
-    public Weapon gun;   // อ้างถึงปืน (ScriptableObject)
-    public Weapon sword; // อ้างถึงดาบ (ScriptableObject)
 
+    public Weapon hand;
+    /*public Weapon gun;   // อ้างถึงปืน (ScriptableObject)
+    public Weapon sword; // อ้างถึงดาบ (ScriptableObject)
+    */
     private void Start()
     {
-        EquipWeapon(sword); // เริ่มต้นถือดาบ
+        EquipWeapon(hand); // เริ่มต้นถือดาบ
         enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
 
     }
@@ -49,7 +51,7 @@ public class Player_Weapon : MonoBehaviour
             currentWeapon.Attack();  // ใช้ฟังก์ชันโจมตีของอาวุธปัจจุบัน
         }
     }
-     private void AimAtEnemy()
+     /*private void AimAtEnemy()
     {
          if (enemy != null && gunTransform != null)
         {
@@ -62,12 +64,12 @@ public class Player_Weapon : MonoBehaviour
             // หมุนปืนให้ชี้ไปตามมุมที่คำนวณได้
             gunTransform.rotation = Quaternion.Euler(0, 0, angle);
         }
-    }
+    }*/
 
     // ฟังก์ชันสลับอาวุธระหว่างปืนและดาบ
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)) // กด Q เพื่อสลับอาวุธ
+        /*if (Input.GetKeyDown(KeyCode.Q)) // กด Q เพื่อสลับอาวุธ
         {
             if (currentWeapon == gun)
             {
@@ -77,7 +79,7 @@ public class Player_Weapon : MonoBehaviour
             {
                 EquipWeapon(gun);    // เปลี่ยนเป็นปืน
             }
-        }
+        }*/
 
         // กดปุ่มซ้ายเมาส์เพื่อโจมตี
         if (Input.GetMouseButtonDown(0))
@@ -85,9 +87,9 @@ public class Player_Weapon : MonoBehaviour
             Attack();
         }
 
-        if (currentWeapon == gun)
+        /*if (currentWeapon == gun)
         {
             AimAtEnemy();
-        }
+        }*/
     }
 }
