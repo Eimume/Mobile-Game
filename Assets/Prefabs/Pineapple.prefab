@@ -320,7 +320,8 @@ MonoBehaviour:
   stoppingDistance: 0.61
   attack: 10
   cooldown: 2
-  speed: 400
+  speed: 100
+  rb: {fileID: 0}
   enattack: {fileID: 4364498114525892214}
   anim: {fileID: 2835055602687595525}
   _spriteRenderer: {fileID: 5386084043978856493}
