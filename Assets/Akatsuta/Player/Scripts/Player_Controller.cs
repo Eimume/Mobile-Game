@@ -31,8 +31,15 @@ public class Player_Controller : MonoBehaviour
     public int Health = 100;
     public int Gelatin = 100;
     #endregion
+    private Player_HP _health;
 
+    private void Start()
+    {
+        _health = GetComponent<Player_HP>();
+        //Health = new Player_HP.currentHp;
+    }
     #region Tick
+
     private void Update()
     {
         GatherInput();
@@ -101,5 +108,4 @@ public class Player_Controller : MonoBehaviour
     }
 
     #endregion
-
 }

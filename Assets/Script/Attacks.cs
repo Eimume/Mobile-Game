@@ -35,7 +35,7 @@ public class Attacks : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
-        Debug.Log("Nearest enemy is: " + nearestEnemy.name + " at a distance of " + shortestDistance);
+        //Debug.Log("Nearest enemy is: " + nearestEnemy.name + " at a distance of " + shortestDistance);
 
         if(nearestEnemy != null && Input.GetMouseButtonDown(0))
         {
