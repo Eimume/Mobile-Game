@@ -31,12 +31,12 @@ public class Player_Controller : MonoBehaviour
     public int Health = 100;
     public int Gelatin = 100;
     #endregion
-    private Player_HP _health;
+    Player_HP _health = new Player_HP();
 
     private void Start()
     {
         _health = GetComponent<Player_HP>();
-        //Health = new Player_HP.currentHp;
+        _health.maxHp = Health;
     }
     #region Tick
 

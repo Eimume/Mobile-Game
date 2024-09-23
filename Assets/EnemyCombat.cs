@@ -17,7 +17,7 @@ public class EnemyCombat : MonoBehaviour
     private bool isFollowingPlayer = false; // Is the enemy following the player?
 
     [Header("Dependencies")]
-    Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
     [SerializeField] Ene_closeCom enattack;
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer _spriteRenderer;
