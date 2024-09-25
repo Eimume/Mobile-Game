@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-     public Weapon weaponToEquip;  // อาวุธที่ผู้เล่นจะได้รับเมื่อเก็บ
+    public Weapon weaponToEquip;  // อาวุธที่ผู้เล่นจะได้รับเมื่อเก็บ
 
     private void OnTriggerEnter2D(Collider2D other)
     {

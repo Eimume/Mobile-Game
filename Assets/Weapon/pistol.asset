@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Gun
+  m_Name: pistol
   m_EditorClassIdentifier: Assembly-CSharp::Gun
-  weaponName: Gun_Test
-  damage: 10
-  attackSpeed: 5
+  weaponName: pistol
+  damage: 20
+  attackSpeed: 2
   weaponIcon: {fileID: -251378071446750934, guid: add52ef99f3756a4fa916062c5995746, type: 3}
-  weaponPrefab: {fileID: 8441368283915570871, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-  ammo: 10
+  weaponPrefab: {fileID: 4231751078430949057, guid: c8dbdedf2f02c534497957e1827127d0, type: 3}
+  ammo: 30
