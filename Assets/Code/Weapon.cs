@@ -56,6 +56,7 @@ public class Gun : Weapon
         // If currently reloading, can't shoot
         if (isReloading)
         {
+            Debug.Log("Gun is reloading");
             Reload();
             return;
         }
@@ -63,6 +64,7 @@ public class Gun : Weapon
         // If no ammo left, start reloading
         if (currentAmmo <= 0)
         {
+            Debug.Log("No ammo, reloading...");
             StartReloading();
             return;
         }
@@ -70,6 +72,7 @@ public class Gun : Weapon
         shootTimer += Time.deltaTime;
         if (shootTimer >= shootInterval && nearestEnemy != null)
         {
+             Debug.Log("Shooting at enemy: " + nearestEnemy.name);
             // Instantiate bullet at gun's position
             GameObject bullet = Instantiate(bulletPrefab, gunTransform.position, gunTransform.rotation);
 

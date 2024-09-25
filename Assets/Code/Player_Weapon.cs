@@ -48,6 +48,7 @@ public class Player_Weapon : MonoBehaviour
                     // Aim at the nearest enemy
                     gun.AimAtEnemy(gunTransform, nearestEnemy);
                     gun.ShootAtEnemy(gunTransform, nearestEnemy);
+                    Debug.Log("Shoot" );
                 }
             }
         }
