@@ -319,7 +319,7 @@ MonoBehaviour:
   detectionRadius: 6
   stoppingDistance: 1.31
   attack: 10
-  cooldown: 1
+  cooldown: 2
   speed: 300
   rb: {fileID: 0}
   enattack: {fileID: 8757098055107176464}

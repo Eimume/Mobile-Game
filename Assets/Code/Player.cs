@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
     public float PlayerSpeed;
     public float PlayerDamage;
+    public InputAction playerControls;
     private Rigidbody2D rb;
     private Vector2 movementDirection;
     void Start()

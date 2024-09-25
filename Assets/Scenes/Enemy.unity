@@ -794,10 +794,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: orenge
       objectReference: {fileID: 0}
-    - target: {fileID: 8857173284253715993, guid: 9d8fca887cdee054a949eb15a4985d34, type: 3}
-      propertyPath: cooldown
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1245,6 +1241,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeed: 10
   PlayerDamage: 10
+  playerControls:
+    m_Name: Player Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 53526384-0e31-452a-8d60-7cb8a4ce4cdf
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!50 &1757006072
 Rigidbody2D:
   serializedVersion: 4
@@ -1426,67 +1431,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4599265516676585656, guid: c60e65af3f5923e49a19db4d555ce973, type: 3}
   m_PrefabInstance: {fileID: 6438642773395629602}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1163030013208594146
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -3473974087188393750, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.5953
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.647572
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.013653552
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974238544199222116, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8441368283915570871, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3ef300dffc01b94f94495d3d76f8f95, type: 3}
 --- !u!1001 &1405746045432330488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1541,7 +1485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4785409193021484421, guid: 3f6e4cd6518181c4fbc3a016a4803781, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1604,14 +1548,6 @@ PrefabInstance:
     - target: {fileID: 5165201354879900011, guid: 7402963c87076a147a4292bcb9951bc9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954935618545824144, guid: 7402963c87076a147a4292bcb9951bc9, type: 3}
-      propertyPath: cooldown
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5954935618545824144, guid: 7402963c87076a147a4292bcb9951bc9, type: 3}
-      propertyPath: stoppingDistance
-      value: 1.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1939,6 +1875,5 @@ SceneRoots:
   - {fileID: 5627232720542479069}
   - {fileID: 5000755587301873196}
   - {fileID: 1451527597}
-  - {fileID: 1163030013208594146}
   - {fileID: 1023485503}
   - {fileID: 8282084038546100239}

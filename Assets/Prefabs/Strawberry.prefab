@@ -208,9 +208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   detectionRadius: 6
-  stoppingDistance: 1.31
+  stoppingDistance: 1.13
   attack: 10
-  cooldown: 1
+  cooldown: 2
   speed: 400
   rb: {fileID: 0}
   enattack: {fileID: 5192874674307371518}
