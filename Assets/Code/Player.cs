@@ -3,43 +3,47 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public float PlayerSpeed;
-    public float PlayerDamage;
-    public InputAction playerControls;
-    private Rigidbody2D rb;
-    private Vector2 movementDirection;
+     public PlayerState currentState;  // Reference to the ScriptableObject
+    private playerMovement playerMovement; // Reference to the movement script
+
+    private int health;
+    private float speed;
+    private int strength;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        // Initialize PlayerMovement and apply the state
+        playerMovement = GetComponent<playerMovement>();
+        ApplyState(currentState);  // Apply the initial state when the game starts
     }
 
-    void Update()
+    public void ApplyState(PlayerState newState)
     {
-        playermovement();
+        currentState = newState;
+        health = currentState.health;
+        speed = currentState.speed;
+        strength = currentState.strength;
 
-        if (Input.GetMouseButtonDown(0))
+        // Optionally apply to movement script if used
+        if (playerMovement != null)
         {
-            Attack();
+            playerMovement.SetSpeed(currentState.speed);
         }
-        
     }
 
-
-    void playermovement()
+    public void TakeDamage(int damage)
     {
-         movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        rb.velocity = movementDirection * PlayerSpeed;
+        health -= damage;
+        if (health <= 0)
+        {
+            health = 0;
+            Debug.Log("Player is dead!");
+        }
     }
-
-    void Attack()
+    public void ChangeState(PlayerState newState)
     {
- 
-        Debug.Log("Damage " + PlayerDamage);
-        
-    }
-
-    void Damage()
-    {
-        Debug.Log(PlayerDamage);
+        currentState.OnStateExit(this);
+        ApplyState(newState);
+        currentState.OnStateEnter(this);
     }
 }

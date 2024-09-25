@@ -3,21 +3,30 @@ using UnityEngine;
 public class WeaponPickup : MonoBehaviour
 {
     public Weapon weaponToEquip;  // อาวุธที่ผู้เล่นจะได้รับเมื่อเก็บ
+    private bool isPlayerNear = false;  // Track if the player is in range to pick up
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
-        // ตรวจสอบว่า Collider ที่เข้ามาคือผู้เล่นหรือไม่
-        if (other.CompareTag("Player"))
+    {   
+         if (other.CompareTag("Player"))
         {
-            Player_Weapon player = other.GetComponent<Player_Weapon>();
-            if (player != null)
-            {
-                // ให้ผู้เล่นเปลี่ยนอาวุธเป็นอาวุธนี้
-                player.EquipWeapon(weaponToEquip);
-
-                // ลบ GameObject ของอาวุธออกจากฉากเมื่อเก็บ
-                Destroy(gameObject);
-            }
+            isPlayerNear = true;
+            Debug.Log("Player is near the weapon.");
         }
     }
+
+    // Detect if the player exits the pickup range
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNear = false;
+            Debug.Log("Player left the weapon's range.");
+        }
+    }
+
+    public bool IsPlayerNear()
+    {
+        return isPlayerNear;
+    }
+    
 }

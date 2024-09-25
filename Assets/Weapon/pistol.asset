@@ -16,5 +16,9 @@ MonoBehaviour:
   damage: 20
   attackSpeed: 2
   weaponIcon: {fileID: -251378071446750934, guid: add52ef99f3756a4fa916062c5995746, type: 3}
-  weaponPrefab: {fileID: 4231751078430949057, guid: c8dbdedf2f02c534497957e1827127d0, type: 3}
-  ammo: 30
+  weaponPrefab: {fileID: 9211217930498800286, guid: dddcdb5d036f14c4faef5d869c393c23, type: 3}
+  bulletPrefab: {fileID: 3684454399724150229, guid: 2960aba812196b84f89c8c5f5241e821, type: 3}
+  bulletSpeed: 2
+  shootInterval: 0.5
+  maxAmmo: 10
+  reloadTime: 2
