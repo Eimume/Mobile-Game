@@ -6,7 +6,6 @@ public class Player_Weapon : MonoBehaviour
     public Weapon currentWeapon;      // อาวุธปัจจุบันที่ถืออยู่
     //private GameObject droppedWeapon;       // Store the dropped weapon object
 
-
     private GameObject equippedWeaponInstance;
      private WeaponPickup nearbyWeaponPickup; // Store the nearby weapon pickup
 
@@ -40,16 +39,7 @@ public class Player_Weapon : MonoBehaviour
         {
             if (currentWeapon is Gun gun)
             {
-                // Find the nearest enemy
-                nearestEnemy = FindNearestEnemy();
-
-                if (nearestEnemy != null)
-                {
-                    // Aim at the nearest enemy
-                    gun.AimAtEnemy(gunTransform, nearestEnemy);
-                    gun.ShootAtEnemy(gunTransform, nearestEnemy);
-                    Debug.Log("Shoot" );
-                }
+                Attack();
             }
         }
     }
@@ -71,13 +61,7 @@ public class Player_Weapon : MonoBehaviour
 
     void PickupWeapon(Weapon newWeapon, GameObject weaponObject)
     {
-        // If there's an existing weapon, drop it at the current position
-        /*if (currentWeapon != null)
-        {
-            DropCurrentWeapon();
-        }*/
 
-        // Equip the new weapon
         EquipWeapon(newWeapon);
 
         weaponObject.SetActive(false);  // Disable the weapon from the scene, as it is now equipped
@@ -133,10 +117,41 @@ public class Player_Weapon : MonoBehaviour
 
         if (currentWeapon is Gun gun)
         {
-            gun.Initialize();  // Initialize the gun's ammo and reload state
+            gun.Awake();  // Initialize the gun's ammo and reload state
         }
 
         Debug.Log("Equipped: " + newWeapon.weaponName);
+    }
+
+    public void Attack()
+    {
+        if (currentWeapon != null)
+        {
+            if (currentWeapon is Sword sword)
+            {
+                // Sword attack logic
+                Debug.Log("Attacking with sword!");
+                Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, 1.5f);  // Sword swing range
+                foreach (Collider2D enemy in enemiesHit)
+                {
+                    if (enemy.CompareTag("Enemy"))
+                    {
+                        sword.DealDamage(enemy);  // Deal damage to enemies in range
+                    }
+                }
+            }
+            else if (currentWeapon is Gun gun)
+            {
+                // Gun attack logic
+                nearestEnemy = FindNearestEnemy();
+                if (nearestEnemy != null)
+                {
+                    Debug.Log("Shooting with gun!");
+                    gun.AimAtEnemy(gunTransform, nearestEnemy);
+                    gun.ShootAtEnemy(gunTransform, nearestEnemy);  // Shoot towards the enemy
+                }
+            }
+        }
     }
 
     Transform FindNearestEnemy()

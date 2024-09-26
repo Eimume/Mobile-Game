@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 1216089455697116703}
   - component: {fileID: 716957863545495882}
   - component: {fileID: 4947756607554823335}
+  - component: {fileID: 6943519621525432003}
   m_Layer: 6
   m_Name: Pineapple
   m_TagString: Enemy
@@ -340,6 +341,19 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 400
   nextWaypointDistance: 3
+--- !u!114 &6943519621525432003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7023821707018975419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b169cd5f92289445954766d81f05f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHp: 100
 --- !u!1 &7234566638154236903
 GameObject:
   m_ObjectHideFlags: 0

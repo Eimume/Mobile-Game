@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Spoon
+  m_EditorClassIdentifier: Assembly-CSharp::Sword
+  weaponName: Spoon
+  damage: 10
+  attackSpeed: 3
+  weaponIcon: {fileID: -8647402989506508057, guid: add52ef99f3756a4fa916062c5995746, type: 3}
+  weaponPrefab: {fileID: 8185612866439893220, guid: 29b841f54cca15740bd67fddc5a0e635, type: 3}

@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 4759989167091516871}
   - component: {fileID: 8857173284253715993}
   - component: {fileID: 1133033796329732273}
+  - component: {fileID: 65761224365782827}
   m_Layer: 6
   m_Name: Orenge
   m_TagString: Enemy
@@ -340,6 +341,19 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 400
   nextWaypointDistance: 3
+--- !u!114 &65761224365782827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566102131495427596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b169cd5f92289445954766d81f05f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHp: 100
 --- !u!1 &8906142233309329339
 GameObject:
   m_ObjectHideFlags: 0
