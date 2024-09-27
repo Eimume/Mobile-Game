@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy has died!");
+        Destroy(gameObject);
         // Add additional code to handle player's death (e.g., respawn, game over screen)
     }
 

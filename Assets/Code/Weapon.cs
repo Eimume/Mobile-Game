@@ -8,11 +8,35 @@ public class Weapon : ScriptableObject
     public float attackSpeed;
     public Sprite weaponIcon;
     public GameObject weaponPrefab;
+    public float aimRange = 5f; // Default aiming range for weapons
 
     // ฟังก์ชันโจมตีสำหรับดาบหรือปืน
     public virtual void Attack()
     {
         Debug.Log("Attacking with " + weaponName);
+    }
+    public virtual bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
+    {
+        if (nearestEnemy == null) return false;
+
+        // Calculate the distance to the nearest enemy
+        float distanceToEnemy = Vector2.Distance(weaponTransform.position, nearestEnemy.position);
+        
+        // Check if the enemy is within the weapon's aim range
+        if (distanceToEnemy <= aimRange)
+        {
+            // Calculate direction and rotate weapon towards the enemy
+            Vector2 direction = nearestEnemy.position - weaponTransform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            weaponTransform.rotation = Quaternion.Euler(0, 0, angle);
+
+            // Optionally, draw a Debug Ray to visualize the aim direction
+            Debug.DrawRay(weaponTransform.position, direction.normalized * distanceToEnemy, Color.green);
+
+            return true;
+        }
+
+        return false; // Enemy is out of range
     }
 }
 
@@ -27,30 +51,25 @@ public class Gun : Weapon
     public float reloadTime = 2f;      // Time to reload in seconds
     public int bulletDamage = 20;      // Damage that the bullets from this gun deal
 
-
     private int currentAmmo;             // Current ammo available
     private float shootTimer;            // Timer for controlling shooting interval
     private bool isReloading;            // Is the gun currently reloading?
     private float reloadTimer;           // Timer to track reload progress
-    // ฟังก์ชันโจมตีเฉพาะสำหรับปืน
     
-    public void Awake()
+   /* public override void Attack()
+    {
+        Debug.Log("Shooting with the gun: " + weaponName);
+    }*/
+    public void Initialize()
     {
         currentAmmo = maxAmmo;  // Start with a full ammo clip
         isReloading = false;    // Gun is not reloading initially
         shootTimer = 0f;        // Reset shoot timer
     }
 
-     public void AimAtEnemy(Transform gunTransform, Transform nearestEnemy)
+     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
     {
-        if (nearestEnemy == null) return;
-
-        // Calculate the direction to the nearest enemy
-        Vector2 direction = (nearestEnemy.position - gunTransform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // Rotate the gun to face the enemy
-        gunTransform.rotation = Quaternion.Euler(0, 0, angle);
+        return base.AimAtEnemy(weaponTransform, nearestEnemy);
     }
     public void ShootAtEnemy(Transform gunTransform, Transform nearestEnemy)
     {
@@ -125,12 +144,38 @@ public class Gun : Weapon
 public class Sword : Weapon
 {
     public int damage = 25;
-    // ฟังก์ชันโจมตีเฉพาะสำหรับดาบ
+    public float attackAngle = 180f; // Attack angle range (180 degrees)
+
+    public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
+    {
+        if (nearestEnemy == null) return false;
+
+        // Calculate the distance to the nearest enemy
+        float distanceToEnemy = Vector2.Distance(weaponTransform.position, nearestEnemy.position);
+
+        // Calculate the direction to the nearest enemy
+        Vector2 directionToEnemy = (nearestEnemy.position - weaponTransform.position).normalized;
+        float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
+
+        // Check if the enemy is within the sword's aim range and attack angle
+        if (distanceToEnemy <= aimRange && angleToEnemy <= attackAngle / 2)
+        {
+            // Rotate the player to face the enemy
+            weaponTransform.right = directionToEnemy;
+
+            // Draw a debug line for visualization
+            Debug.DrawLine(weaponTransform.position, nearestEnemy.position, Color.red);
+
+            return true;
+        }
+
+        return false; // Enemy is out of range or attack angle
+    }
+
     public override void Attack()
     {
         Debug.Log("Swinging the sword: " + weaponName);
-    }
-    public void DealDamage(Collider2D enemyCollider)
+    }    public void DealDamage(Collider2D enemyCollider)
     {
         EnemyHealth enemy = enemyCollider.GetComponent<EnemyHealth>();
         if (enemy != null)
@@ -144,8 +189,10 @@ public class Sword : Weapon
 public class Hand : Weapon
 {
     // ฟังก์ชันโจมตีเฉพาะสำหรับดาบ
-    public override void Attack()
+    /*public override void Attack()
     {
         Debug.Log("punch" + weaponName);
-    }
+    }*/
 }
+
+

@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class Bullet_Weapon : MonoBehaviour
 {
+    public float speed = 5f; // Speed of the bullet
     private int bulletDamage;
     public float lifeTime = 3f; // How long the bullet exists before being destroyed
 
     private void Start()
     {
         Destroy(gameObject, lifeTime); // Destroy the bullet after a set time
+    }
+    void Update()
+    {
+        // Move the bullet forward based on its speed
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
     public void SetDamage(int damage)
     {

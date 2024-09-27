@@ -11,6 +11,7 @@ public class Player_Weapon : MonoBehaviour
 
     public Transform gunTransform;    // อ้างถึง Transform ของปืน
     private Transform nearestEnemy;
+    //public GameObject enemy;
 
     public Weapon hand;
 
@@ -18,16 +19,15 @@ public class Player_Weapon : MonoBehaviour
 
     private void Start()
     {
-        EquipWeapon(hand); // เริ่มต้นถือดาบ
-        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-        if (enemy != null)
-        {
-            nearestEnemy = enemy.transform;
-        }
+        EquipWeapon(hand);
+        //enemy = GameObject.FindGameObjectWithTag("Enemy");
 
     }
     private void Update()
     {
+
+        nearestEnemy = FindNearestEnemy();
+        
         // กดปุ่มซ้ายเมาส์เพื่อโจมตี
         if (nearbyWeaponPickup != null && nearbyWeaponPickup.IsPlayerNear() && Input.GetKeyDown(KeyCode.Q))
         {
@@ -35,7 +35,7 @@ public class Player_Weapon : MonoBehaviour
             //PickupWeapon(nearbyWeaponPickup.weaponToEquip, nearbyWeaponPickup.gameObject);
         }
 
-         if (Input.GetKeyDown(KeyCode.E))
+         if (Input.GetKey(KeyCode.E))
         {
             if (currentWeapon is Gun gun)
             {
@@ -44,7 +44,7 @@ public class Player_Weapon : MonoBehaviour
         }
     }
     
-    void SwitchWeapon()
+    public void SwitchWeapon()
     {
         if (currentWeapon != null && nearbyWeaponPickup != null)
         {
@@ -117,7 +117,7 @@ public class Player_Weapon : MonoBehaviour
 
         if (currentWeapon is Gun gun)
         {
-            gun.Awake();  // Initialize the gun's ammo and reload state
+            gun.Initialize();  // Initialize the gun's ammo and reload state
         }
 
         Debug.Log("Equipped: " + newWeapon.weaponName);
@@ -127,11 +127,16 @@ public class Player_Weapon : MonoBehaviour
     {
         if (currentWeapon != null)
         {
-            if (currentWeapon is Sword sword)
+            bool isEnemyInRange = currentWeapon.AimAtEnemy(gunTransform, nearestEnemy);
+            if (isEnemyInRange)
             {
+                // If enemy is within range, execute the attack
+                if (currentWeapon is Sword sword)
+                {
+                    sword.Attack();
                 // Sword attack logic
-                Debug.Log("Attacking with sword!");
-                Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, 1.5f);  // Sword swing range
+                    Debug.Log("Attacking with sword!");
+                    Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, 1.5f);  // Sword swing range
                 foreach (Collider2D enemy in enemiesHit)
                 {
                     if (enemy.CompareTag("Enemy"))
@@ -139,18 +144,19 @@ public class Player_Weapon : MonoBehaviour
                         sword.DealDamage(enemy);  // Deal damage to enemies in range
                     }
                 }
-            }
-            else if (currentWeapon is Gun gun)
-            {
-                // Gun attack logic
-                nearestEnemy = FindNearestEnemy();
-                if (nearestEnemy != null)
+                }
+                else if (currentWeapon is Gun gun)
                 {
-                    Debug.Log("Shooting with gun!");
                     gun.AimAtEnemy(gunTransform, nearestEnemy);
-                    gun.ShootAtEnemy(gunTransform, nearestEnemy);  // Shoot towards the enemy
+                    gun.ShootAtEnemy(gunTransform, nearestEnemy);
                 }
             }
+            else
+            {
+                Debug.Log("Enemy out of range!");
+            }
+            
+            
         }
     }
 
@@ -172,6 +178,15 @@ public class Player_Weapon : MonoBehaviour
         return nearest;
     
     }
+    private void OnDrawGizmos()
+    {
+        if (currentWeapon != null)
+        {
+            Gizmos.color = Color.green;
+            // Draw a wire sphere representing the weapon's aim range
+            Gizmos.DrawWireSphere(transform.position, currentWeapon.aimRange);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -192,12 +207,5 @@ public class Player_Weapon : MonoBehaviour
         }
 
     }
-    // ฟังก์ชันโจมตี
-    /*public void Attack()
-    {
-        if (currentWeapon != null)
-        {
-            currentWeapon.Attack();  // ใช้ฟังก์ชันโจมตีของอาวุธปัจจุบัน
-        }
-    }*/
+
 }

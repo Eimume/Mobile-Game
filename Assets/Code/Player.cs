@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-     public PlayerState currentState;  // Reference to the ScriptableObject
+    public PlayerState currentState;  // Reference to the ScriptableObject
     private playerMovement playerMovement; // Reference to the movement script
 
     private int health;
