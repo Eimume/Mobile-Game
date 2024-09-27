@@ -170,7 +170,7 @@ public class Sword : Weapon
             Debug.Log("Dealt " + damage + " damage to " + enemy.name);
         }
     }   
-    public void OnDrawGizmosSelected(Transform weaponTransform)
+   /* public void OnDrawGizmosSelected(Transform weaponTransform)
     {
         // Visualize the sword's attack range and angle in the editor
         Gizmos.color = Color.red;
@@ -193,7 +193,7 @@ public class Sword : Weapon
             Gizmos.DrawLine(previousPoint, weaponTransform.position + arcPoint);
             previousPoint = weaponTransform.position + arcPoint;
         }
-    }
+    }*/
 
 }
 #endregion

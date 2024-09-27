@@ -42,7 +42,6 @@ public class Player_Weapon : MonoBehaviour
          if (Input.GetKey(KeyCode.E))
         {
                 Attack();
-            
         }
     }
     
@@ -63,7 +62,6 @@ public class Player_Weapon : MonoBehaviour
     {
 
         EquipWeapon(newWeapon);
-
         weaponObject.SetActive(false);  // Disable the weapon from the scene, as it is now equipped
         Debug.Log("Picked up: " + newWeapon.name);
     }
@@ -136,6 +134,7 @@ public class Player_Weapon : MonoBehaviour
                     Debug.Log("Attacking with sword!");
 
                     //DrawSwordAttackArea(sword);
+                    /*
 
                     Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(weaponTransform.position, sword.attackRadius);  // Sword swing range
                     foreach (Collider2D enemy in enemiesHit)
@@ -147,9 +146,10 @@ public class Player_Weapon : MonoBehaviour
                             // Deal damage to the enemy
                             sword.DealDamage(enemy);
                         }
-                    }   
+                    }   */
                 }
-                else if (currentWeapon is Gun gun)
+                
+                if (currentWeapon is Gun gun)
                 {
                     gun.AimAtEnemy(weaponTransform, nearestEnemy);
                     gun.ShootAtEnemy(weaponTransform, nearestEnemy);
@@ -190,7 +190,7 @@ public class Player_Weapon : MonoBehaviour
         }
         if (currentWeapon is Sword sword)
         {
-            sword.OnDrawGizmosSelected(weaponTransform); // Visualize the sword's attack range and angle
+           // sword.OnDrawGizmosSelected(weaponTransform); // Visualize the sword's attack range and angle
         }
     }
 
