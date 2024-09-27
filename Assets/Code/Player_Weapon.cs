@@ -9,10 +9,13 @@ public class Player_Weapon : MonoBehaviour
     private GameObject equippedWeaponInstance;
      private WeaponPickup nearbyWeaponPickup; // Store the nearby weapon pickup
 
-    public Transform gunTransform;    // อ้างถึง Transform ของปืน
+    //public Transform gunTransform;    // อ้างถึง Transform ของปืน
+    public Transform weaponTransform; // Transform of the weapon (used for aiming)
+
     private Transform nearestEnemy;
     //public GameObject enemy;
 
+    //public LineRenderer lineRenderer;
     public Weapon hand;
 
     private GameObject lastDroppedWeaponInstance;
@@ -20,6 +23,7 @@ public class Player_Weapon : MonoBehaviour
     private void Start()
     {
         EquipWeapon(hand);
+        //lineRenderer = GetComponent<LineRenderer>(); 
         //enemy = GameObject.FindGameObjectWithTag("Enemy");
 
     }
@@ -37,10 +41,8 @@ public class Player_Weapon : MonoBehaviour
 
          if (Input.GetKey(KeyCode.E))
         {
-            if (currentWeapon is Gun gun)
-            {
                 Attack();
-            }
+            
         }
     }
     
@@ -53,8 +55,6 @@ public class Player_Weapon : MonoBehaviour
 
             // Drop the current weapon before picking up the new one
             DropCurrentWeapon();
-
-            // Pick up the new weapon
             PickupWeapon(newWeapon, weaponObject);
         }
     }
@@ -85,7 +85,6 @@ public class Player_Weapon : MonoBehaviour
             }
 
             lastDroppedWeaponInstance = equippedWeaponInstance;
-
             Debug.Log("Dropped: " + currentWeapon.name);
         }
     }
@@ -127,36 +126,39 @@ public class Player_Weapon : MonoBehaviour
     {
         if (currentWeapon != null)
         {
-            bool isEnemyInRange = currentWeapon.AimAtEnemy(gunTransform, nearestEnemy);
+            bool isEnemyInRange = currentWeapon.AimAtEnemy(weaponTransform, nearestEnemy);
             if (isEnemyInRange)
             {
                 // If enemy is within range, execute the attack
                 if (currentWeapon is Sword sword)
                 {
                     sword.Attack();
-                // Sword attack logic
                     Debug.Log("Attacking with sword!");
-                    Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, 1.5f);  // Sword swing range
-                foreach (Collider2D enemy in enemiesHit)
-                {
-                    if (enemy.CompareTag("Enemy"))
+
+                    //DrawSwordAttackArea(sword);
+
+                    Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(weaponTransform.position, sword.attackRadius);  // Sword swing range
+                    foreach (Collider2D enemy in enemiesHit)
                     {
-                        sword.DealDamage(enemy);  // Deal damage to enemies in range
-                    }
-                }
+                        Vector2 directionToEnemy = enemy.transform.position - weaponTransform.position;
+                        float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
+                        if (angleToEnemy <= sword.attackAngle / 2)
+                        {
+                            // Deal damage to the enemy
+                            sword.DealDamage(enemy);
+                        }
+                    }   
                 }
                 else if (currentWeapon is Gun gun)
                 {
-                    gun.AimAtEnemy(gunTransform, nearestEnemy);
-                    gun.ShootAtEnemy(gunTransform, nearestEnemy);
+                    gun.AimAtEnemy(weaponTransform, nearestEnemy);
+                    gun.ShootAtEnemy(weaponTransform, nearestEnemy);
                 }
             }
             else
             {
                 Debug.Log("Enemy out of range!");
-            }
-            
-            
+            }    
         }
     }
 
@@ -186,7 +188,25 @@ public class Player_Weapon : MonoBehaviour
             // Draw a wire sphere representing the weapon's aim range
             Gizmos.DrawWireSphere(transform.position, currentWeapon.aimRange);
         }
+        if (currentWeapon is Sword sword)
+        {
+            sword.OnDrawGizmosSelected(weaponTransform); // Visualize the sword's attack range and angle
+        }
     }
+
+   /* void DrawSwordAttackArea(Sword sword)
+    {
+        int segments = 20; // The number of segments to represent the arc
+        float angleStep = sword.attackAngle / segments;
+
+        lineRenderer.positionCount = segments + 1;
+        for (int i = 0; i <= segments; i++)
+        {
+            float currentAngle = -sword.attackAngle / 2 + angleStep * i;
+            Vector3 arcPoint = Quaternion.Euler(0, 0, currentAngle) * weaponTransform.right * sword.attackRadius;
+            lineRenderer.SetPosition(i, weaponTransform.position + arcPoint);
+        }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

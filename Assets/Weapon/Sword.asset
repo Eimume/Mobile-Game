@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: Assembly-CSharp::Sword
   weaponName: Sword
-  damage: 20
   attackSpeed: 10
   weaponIcon: {fileID: 3452348803995201881, guid: add52ef99f3756a4fa916062c5995746, type: 3}
   weaponPrefab: {fileID: 936002087993230886, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
+  aimRange: 3.48
+  damage: 20
+  attackRadius: 2.79
+  attackAngle: 180

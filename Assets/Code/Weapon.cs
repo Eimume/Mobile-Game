@@ -40,6 +40,7 @@ public class Weapon : ScriptableObject
     }
 }
 
+#region Gun
 [CreateAssetMenu(fileName = "NewGun", menuName = "Weapons/Gun")]
 public class Gun : Weapon
 {
@@ -139,51 +140,64 @@ public class Gun : Weapon
         }
     }
 }
+#endregion
 
+#region Sword
 [CreateAssetMenu(fileName = "NewSword", menuName = "Weapons/Sword")]
 public class Sword : Weapon
 {
     public int damage = 25;
+    public float attackRadius = 1.5f; // The range for dealing damage (close combat)
     public float attackAngle = 180f; // Attack angle range (180 degrees)
 
     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
     {
         if (nearestEnemy == null) return false;
 
-        // Calculate the distance to the nearest enemy
-        float distanceToEnemy = Vector2.Distance(weaponTransform.position, nearestEnemy.position);
-
-        // Calculate the direction to the nearest enemy
-        Vector2 directionToEnemy = (nearestEnemy.position - weaponTransform.position).normalized;
-        float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
-
-        // Check if the enemy is within the sword's aim range and attack angle
-        if (distanceToEnemy <= aimRange && angleToEnemy <= attackAngle / 2)
-        {
-            // Rotate the player to face the enemy
-            weaponTransform.right = directionToEnemy;
-
-            // Draw a debug line for visualization
-            Debug.DrawLine(weaponTransform.position, nearestEnemy.position, Color.red);
-
-            return true;
-        }
-
-        return false; // Enemy is out of range or attack angle
+        // Aim at the enemy if within the aim range (this uses aimRange, not attackRadius)
+        return base.AimAtEnemy(weaponTransform, nearestEnemy);
     }
 
     public override void Attack()
     {
         Debug.Log("Swinging the sword: " + weaponName);
-    }    public void DealDamage(Collider2D enemyCollider)
+    }
+    public void DealDamage(Collider2D enemyCollider)
     {
         EnemyHealth enemy = enemyCollider.GetComponent<EnemyHealth>();
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            Debug.Log("Dealt " + damage + " damage to " + enemy.name);
+        }
+    }   
+    public void OnDrawGizmosSelected(Transform weaponTransform)
+    {
+        // Visualize the sword's attack range and angle in the editor
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(weaponTransform.position, attackRadius);
+
+        // Draw the attack angle for clarity
+        Vector3 startDirection = Quaternion.Euler(0, 0, -attackAngle / 2) * weaponTransform.right;
+        Vector3 endDirection = Quaternion.Euler(0, 0, attackAngle / 2) * weaponTransform.right;
+
+        Gizmos.DrawLine(weaponTransform.position, weaponTransform.position + startDirection * attackRadius);
+        Gizmos.DrawLine(weaponTransform.position, weaponTransform.position + endDirection * attackRadius);
+        
+        int segments = 20;
+        Vector3 previousPoint = weaponTransform.position + startDirection * attackRadius;
+        for (int i = 1; i <= segments; i++)
+        {
+            float angleStep = attackAngle / segments;
+            float currentAngle = -attackAngle / 2 + angleStep * i;
+            Vector3 arcPoint = Quaternion.Euler(0, 0, currentAngle) * weaponTransform.right * attackRadius;
+            Gizmos.DrawLine(previousPoint, weaponTransform.position + arcPoint);
+            previousPoint = weaponTransform.position + arcPoint;
         }
     }
+
 }
+#endregion
 
 [CreateAssetMenu(fileName = "hand", menuName = "Weapons/Hand")]
 public class Hand : Weapon

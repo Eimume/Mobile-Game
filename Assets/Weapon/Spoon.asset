@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Spoon
   m_EditorClassIdentifier: Assembly-CSharp::Sword
   weaponName: Spoon
-  damage: 10
   attackSpeed: 3
   weaponIcon: {fileID: -8647402989506508057, guid: add52ef99f3756a4fa916062c5995746, type: 3}
   weaponPrefab: {fileID: 8185612866439893220, guid: 29b841f54cca15740bd67fddc5a0e635, type: 3}
+  aimRange: 8
+  damage: 10
+  attackRadius: 5
+  attackAngle: 180
