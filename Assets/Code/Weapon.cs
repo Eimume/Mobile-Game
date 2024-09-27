@@ -7,8 +7,9 @@ public class Weapon : ScriptableObject
     //public int damage;
     public float attackSpeed;
     public Sprite weaponIcon;
+    public float aimRange = 5f;
     public GameObject weaponPrefab;
-    public float aimRange = 5f; // Default aiming range for weapons
+
 
     // ฟังก์ชันโจมตีสำหรับดาบหรือปืน
     public virtual void Attack()
@@ -52,15 +53,13 @@ public class Gun : Weapon
     public float reloadTime = 2f;      // Time to reload in seconds
     public int bulletDamage = 20;      // Damage that the bullets from this gun deal
 
+
     private int currentAmmo;             // Current ammo available
     private float shootTimer;            // Timer for controlling shooting interval
     private bool isReloading;            // Is the gun currently reloading?
     private float reloadTimer;           // Timer to track reload progress
+    // ฟังก์ชันโจมตีเฉพาะสำหรับปืน
     
-   /* public override void Attack()
-    {
-        Debug.Log("Shooting with the gun: " + weaponName);
-    }*/
     public void Initialize()
     {
         currentAmmo = maxAmmo;  // Start with a full ammo clip
@@ -68,7 +67,7 @@ public class Gun : Weapon
         shootTimer = 0f;        // Reset shoot timer
     }
 
-     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
+    public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
     {
         return base.AimAtEnemy(weaponTransform, nearestEnemy);
     }
@@ -203,10 +202,8 @@ public class Sword : Weapon
 public class Hand : Weapon
 {
     // ฟังก์ชันโจมตีเฉพาะสำหรับดาบ
-    /*public override void Attack()
+    public override void Attack()
     {
         Debug.Log("punch" + weaponName);
-    }*/
+    }
 }
-
-
