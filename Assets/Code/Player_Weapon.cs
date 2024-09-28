@@ -24,8 +24,6 @@ public class Player_Weapon : MonoBehaviour
     private void Start()
     {
         EquipWeapon(hand);
-        //lineRenderer = GetComponent<LineRenderer>(); 
-        //enemy = GameObject.FindGameObjectWithTag("Enemy");
 
     }
     private void Update()
@@ -33,6 +31,11 @@ public class Player_Weapon : MonoBehaviour
 
         nearestEnemy = FindNearestEnemy();
         
+        if (currentWeapon is Sword sword)
+        {
+            sword.UpdateCooldown(Time.deltaTime);
+        }
+
         // กดปุ่มซ้ายเมาส์เพื่อโจมตี
         if (nearbyWeaponPickup != null && nearbyWeaponPickup.IsPlayerNear() && Input.GetKeyDown(KeyCode.Q))
         {
@@ -108,6 +111,16 @@ public class Player_Weapon : MonoBehaviour
                 equippedWeaponInstance = Instantiate(newWeapon.weaponPrefab, weaponHolder.position, weaponHolder.rotation);
                 equippedWeaponInstance.transform.SetParent(weaponHolder);
             }
+        }
+        
+        if (newWeapon is Sword)
+        {
+            equippedWeaponInstance.transform.localRotation = Quaternion.Euler(0, 0, -90); // Rotate sword by -90 degrees
+        }
+        else
+        {
+            // Reset rotation for other weapons
+            equippedWeaponInstance.transform.localRotation = Quaternion.identity; // No rotation for non-sword weapons
         }
 
         // เปลี่ยนอาวุธใหม่

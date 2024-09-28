@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewWeapon", menuName = "Weapons/Weapon")]
@@ -150,7 +151,9 @@ public class Sword : Weapon
     public float attackAngle = 180f; // Attack angle range (180 degrees)
     public float attackCooldown = 1.0f;     // Time delay between sword attacks
 
-    private float lastAttackTime = 0f;
+    private float attackTimer;
+    private bool canAttack = true;
+    //private bool canDealDamage = true; 
 
 
     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
@@ -163,28 +166,46 @@ public class Sword : Weapon
 
     public override void Attack()
     {
-        if (Time.deltaTime >= lastAttackTime + attackCooldown)
+        if (canAttack)
         {
             Debug.Log("Sword swinging: " + weaponName);
+            canAttack = false;  // Set the sword to not able to attack again until cooldown
+            attackTimer = 0f;
+            //canDealDamage = false;
 
-            // Reset the last attack time
-            lastAttackTime = Time.deltaTime;
-
-            // Here, we don't directly deal damage; we'll handle that in Player_Weapon script by detecting nearby enemies
+            // Logic for dealing damage to enemies (handled in Player_Weapon)
         }
         else
         {
             Debug.Log("Sword attack is on cooldown.");
         }
     }
+
+    public void UpdateCooldown(float deltaTime)
+    {
+        if (!canAttack)
+        {
+            attackTimer += Time.deltaTime;
+
+            // When the timer exceeds the cooldown period, reset the ability to attack
+            if (attackTimer >= attackCooldown)
+            {
+                canAttack = true;
+                //canDealDamage = true;
+                //attackTimer = 0f;
+            }
+        }
+    }
     public void DealDamage(Collider2D enemyCollider)
     {
-        EnemyHealth enemy = enemyCollider.GetComponent<EnemyHealth>();
-        if (enemy != null)
-        {
-            enemy.TakeDamage(damage);
-            Debug.Log("Dealt " + damage + " damage to " + enemy.name);
-        }
+        
+            EnemyHealth enemy = enemyCollider.GetComponent<EnemyHealth>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+                Debug.Log("Dealt " + damage + " damage to " + enemy.name);
+            }
+        
     }   
 
 }
