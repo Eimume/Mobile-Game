@@ -148,6 +148,10 @@ public class Sword : Weapon
     public int damage = 25;
     public float attackRadius = 1.5f; // The range for dealing damage (close combat)
     public float attackAngle = 180f; // Attack angle range (180 degrees)
+    public float attackCooldown = 1.0f;     // Time delay between sword attacks
+
+    private float lastAttackTime = 0f;
+
 
     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
     {
@@ -159,7 +163,19 @@ public class Sword : Weapon
 
     public override void Attack()
     {
-        Debug.Log("Swinging the sword: " + weaponName);
+        if (Time.deltaTime >= lastAttackTime + attackCooldown)
+        {
+            Debug.Log("Sword swinging: " + weaponName);
+
+            // Reset the last attack time
+            lastAttackTime = Time.deltaTime;
+
+            // Here, we don't directly deal damage; we'll handle that in Player_Weapon script by detecting nearby enemies
+        }
+        else
+        {
+            Debug.Log("Sword attack is on cooldown.");
+        }
     }
     public void DealDamage(Collider2D enemyCollider)
     {
@@ -170,30 +186,6 @@ public class Sword : Weapon
             Debug.Log("Dealt " + damage + " damage to " + enemy.name);
         }
     }   
-   /* public void OnDrawGizmosSelected(Transform weaponTransform)
-    {
-        // Visualize the sword's attack range and angle in the editor
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(weaponTransform.position, attackRadius);
-
-        // Draw the attack angle for clarity
-        Vector3 startDirection = Quaternion.Euler(0, 0, -attackAngle / 2) * weaponTransform.right;
-        Vector3 endDirection = Quaternion.Euler(0, 0, attackAngle / 2) * weaponTransform.right;
-
-        Gizmos.DrawLine(weaponTransform.position, weaponTransform.position + startDirection * attackRadius);
-        Gizmos.DrawLine(weaponTransform.position, weaponTransform.position + endDirection * attackRadius);
-        
-        int segments = 20;
-        Vector3 previousPoint = weaponTransform.position + startDirection * attackRadius;
-        for (int i = 1; i <= segments; i++)
-        {
-            float angleStep = attackAngle / segments;
-            float currentAngle = -attackAngle / 2 + angleStep * i;
-            Vector3 arcPoint = Quaternion.Euler(0, 0, currentAngle) * weaponTransform.right * attackRadius;
-            Gizmos.DrawLine(previousPoint, weaponTransform.position + arcPoint);
-            previousPoint = weaponTransform.position + arcPoint;
-        }
-    }*/
 
 }
 #endregion

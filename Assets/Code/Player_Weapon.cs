@@ -19,6 +19,7 @@ public class Player_Weapon : MonoBehaviour
     public Weapon hand;
 
     private GameObject lastDroppedWeaponInstance;
+    
 
     private void Start()
     {
@@ -133,20 +134,20 @@ public class Player_Weapon : MonoBehaviour
                     sword.Attack();
                     Debug.Log("Attacking with sword!");
 
-                    //DrawSwordAttackArea(sword);
-                    /*
-
                     Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(weaponTransform.position, sword.attackRadius);  // Sword swing range
                     foreach (Collider2D enemy in enemiesHit)
                     {
-                        Vector2 directionToEnemy = enemy.transform.position - weaponTransform.position;
-                        float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
-                        if (angleToEnemy <= sword.attackAngle / 2)
+                        if (enemy.CompareTag("Enemy"))
                         {
-                            // Deal damage to the enemy
-                            sword.DealDamage(enemy);
+                            Vector2 directionToEnemy = enemy.transform.position - weaponTransform.position;
+                            float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
+                            if (angleToEnemy <= sword.attackAngle / 2)
+                            {
+                                // Deal damage to the enemy
+                                sword.DealDamage(enemy);
+                            }
                         }
-                    }   */
+                    }   
                 }
                 
                 if (currentWeapon is Gun gun)
@@ -190,23 +191,36 @@ public class Player_Weapon : MonoBehaviour
         }
         if (currentWeapon is Sword sword)
         {
-           // sword.OnDrawGizmosSelected(weaponTransform); // Visualize the sword's attack range and angle
+           // Draw a wire sphere representing the sword's attack radius
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, sword.attackRadius);
+
+                // Draw sword attack angle
+            Vector3 startDirection = Quaternion.Euler(0, 0, -sword.attackAngle / 2) * weaponTransform.right;
+            Vector3 endDirection = Quaternion.Euler(0, 0, sword.attackAngle / 2) * weaponTransform.right;
+            Gizmos.DrawLine(weaponTransform.position, weaponTransform.position + startDirection * sword.attackRadius);
+            Gizmos.DrawLine(weaponTransform.position, weaponTransform.position + endDirection * sword.attackRadius);
+
+            // Draw arc to visualize the attack area
+            int segments = 20;
+            Vector3 previousPoint = weaponTransform.position + startDirection * sword.attackRadius;
+            for (int i = 1; i <= segments; i++)
+            {
+                float angleStep = sword.attackAngle / segments;
+                float currentAngle = -sword.attackAngle / 2 + angleStep * i;
+                Vector3 arcPoint = Quaternion.Euler(0, 0, currentAngle) * weaponTransform.right * sword.attackRadius;
+                Gizmos.DrawLine(previousPoint, weaponTransform.position + arcPoint);
+                previousPoint = weaponTransform.position + arcPoint;
+            }
         }
-    }
-
-   /* void DrawSwordAttackArea(Sword sword)
-    {
-        int segments = 20; // The number of segments to represent the arc
-        float angleStep = sword.attackAngle / segments;
-
-        lineRenderer.positionCount = segments + 1;
-        for (int i = 0; i <= segments; i++)
+        else
         {
-            float currentAngle = -sword.attackAngle / 2 + angleStep * i;
-            Vector3 arcPoint = Quaternion.Euler(0, 0, currentAngle) * weaponTransform.right * sword.attackRadius;
-            lineRenderer.SetPosition(i, weaponTransform.position + arcPoint);
+            // Draw default aim range for other weapons (e.g., guns)
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, currentWeapon.aimRange);
         }
-    }*/
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
