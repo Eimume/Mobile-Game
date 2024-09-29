@@ -249,7 +249,11 @@ PrefabInstance:
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 1
+=======
+      value: 0.9914449
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
 =======
       value: 0.9914449
 >>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
@@ -265,7 +269,11 @@ PrefabInstance:
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
+=======
+      value: 0.13052616
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
 =======
       value: 0.13052616
 >>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
@@ -281,7 +289,11 @@ PrefabInstance:
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
+=======
+      value: 15
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
 =======
       value: 15
 >>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
@@ -290,9 +302,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
 =======
+=======
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 936002087993230886, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       insertIndex: -1
@@ -325,6 +340,9 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< HEAD
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
+=======
 >>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
 --- !u!1 &495848581
 GameObject:
