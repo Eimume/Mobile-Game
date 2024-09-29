@@ -248,7 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
       value: 1
+=======
+      value: 0.9914449
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
       objectReference: {fileID: 0}
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalRotation.x
@@ -260,7 +264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0
+=======
+      value: 0.13052616
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
       objectReference: {fileID: 0}
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -272,13 +280,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7685641490614206693, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+<<<<<<< HEAD
       value: 0
+=======
+      value: 15
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
+<<<<<<< HEAD
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
+=======
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 936002087993230886, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 219540301}
+  m_SourcePrefab: {fileID: 100100000, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
+--- !u!1 &219540300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 936002087993230886, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
+  m_PrefabInstance: {fileID: 219540299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &219540301
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219540300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79bf65364f524a348b920018bdf76c08, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+>>>>>>> parent of cbede0f (Merge branch 'prototype' of https://github.com/Eimume/Mobile-Game into prototype)
 --- !u!1 &495848581
 GameObject:
   m_ObjectHideFlags: 0
