@@ -48,7 +48,7 @@ public class Gun : Weapon
 {
     public GameObject bulletPrefab;
     //public Transform firePoint;
-    //public float bulletSpeed = 10f;    // Speed of the bullet
+    public float bulletSpeed = 10f;    // Speed of the bullet
     public float shootInterval = 0.5f; // Delay between shots
     public int maxAmmo = 10;           // Maximum ammo capacity
     public float reloadTime = 2f;      // Time to reload in seconds
@@ -109,7 +109,7 @@ public class Gun : Weapon
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             if (rb != null)
             {              
-                rb.velocity = direction * attackSpeed;
+                rb.velocity = direction * bulletSpeed;
             }
 
             // Consume one ammo and reset timer after shooting
@@ -149,7 +149,7 @@ public class Sword : Weapon
     public int damage = 25;
     public float attackRadius = 1.5f; // The range for dealing damage (close combat)
     public float attackAngle = 180f; // Attack angle range (180 degrees)
-    //public float attackCooldown = 1.0f;
+    public float attackCooldown = 1.0f;     // Time delay between sword attacks
 
     private float attackTimer = 0f;
     private bool canAttack = true;
@@ -159,6 +159,7 @@ public class Sword : Weapon
     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
     {
         if (nearestEnemy == null) return false;
+
         // Aim at the enemy if within the aim range (this uses aimRange, not attackRadius)
         return base.AimAtEnemy(weaponTransform, nearestEnemy);
     }
@@ -232,7 +233,7 @@ public class Sword : Weapon
                 enemy.TakeDamage(damage);
                 Debug.Log("Dealt " + damage + " damage to " + enemy.name);
                 canAttack = false;
-                attackTimer = attackSpeed;
+                attackTimer = attackCooldown;
             }
         }
     }   

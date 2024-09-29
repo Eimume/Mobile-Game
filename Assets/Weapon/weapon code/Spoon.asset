@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sword
   weaponName: Spoon
   attackSpeed: 3
-  weaponIcon: {fileID: 9105793354412808551, guid: be661201c7da8c14e9e71a467cdb7056, type: 3}
+  weaponIcon: {fileID: -8647402989506508057, guid: add52ef99f3756a4fa916062c5995746, type: 3}
+  weaponPrefab: {fileID: 8185612866439893220, guid: 29b841f54cca15740bd67fddc5a0e635, type: 3}
   aimRange: 8
-  weaponPrefab: {fileID: 8185612866439893220, guid: 83f68481004f7eb4b98488c1ac068407, type: 3}
   damage: 10
   attackRadius: 5
   attackAngle: 180
-  attackCooldown: 1
