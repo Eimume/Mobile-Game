@@ -206,16 +206,20 @@ public class Sword : Weapon
     {
         foreach (Collider2D enemyCollider in enemies)
         {
-            // Check if the enemy is within the attack angle
-            Vector2 directionToEnemy = enemyCollider.transform.position - weaponTransform.position;
-            float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
-
-            // Check if the enemy is within the sword's attack angle and radius
-            if (angleToEnemy <= attackAngle / 2)
+           if (enemyCollider.CompareTag("Enemy"))
             {
-                DealDamage(enemyCollider);
+                // Check if the enemy is within the attack angle
+                Vector2 directionToEnemy = enemyCollider.transform.position - weaponTransform.position;
+                float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
 
-                Debug.DrawLine(weaponTransform.position, enemyCollider.transform.position);
+                // Check if the enemy is within the sword's attack angle and radius
+                if (angleToEnemy <= attackAngle / 2)
+                {
+                    DealDamage(enemyCollider);
+
+                    // Optional: Draw a debug line to visualize the enemy being hit
+                    Debug.DrawLine(weaponTransform.position, enemyCollider.transform.position, Color.red, 0.5f);
+                }
             }
         }
     }
