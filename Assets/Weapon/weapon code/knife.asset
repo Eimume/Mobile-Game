@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Spoon
+  m_Name: knife
   m_EditorClassIdentifier: Assembly-CSharp::Sword
-  weaponName: Spoon
-  attackSpeed: 3
-  weaponIcon: {fileID: 9105793354412808551, guid: be661201c7da8c14e9e71a467cdb7056, type: 3}
-  aimRange: 8
-  weaponPrefab: {fileID: 8185612866439893220, guid: 83f68481004f7eb4b98488c1ac068407, type: 3}
-  damage: 10
-  attackRadius: 5
+  weaponName: knife
+  attackSpeed: 5
+  weaponIcon: {fileID: -1187640340953350222, guid: be661201c7da8c14e9e71a467cdb7056, type: 3}
+  aimRange: 5
+  weaponPrefab: {fileID: 1716356772047250920, guid: 77c1466a48e4d9b4c8aef20b09c77690, type: 3}
+  damage: 25
+  attackRadius: 1.5
   attackAngle: 180
-  attackCooldown: 1

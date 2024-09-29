@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Fork
   m_EditorClassIdentifier: Assembly-CSharp::Sword
   weaponName: Fork
-  attackSpeed: 3
+  attackSpeed: 5
   weaponIcon: {fileID: -6075743059395002985, guid: be661201c7da8c14e9e71a467cdb7056, type: 3}
   aimRange: 5
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 2906469128570516502, guid: 6bfce30ed499a3b43ab284995b294004, type: 3}
   damage: 25
   attackRadius: 1.5
   attackAngle: 180
-  attackCooldown: 1
