@@ -144,19 +144,7 @@ public class Player_Weapon : MonoBehaviour
                     Debug.Log("Attacking with sword!");
 
                     Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(weaponTransform.position, sword.attackRadius);  // Sword swing range
-                    foreach (Collider2D enemy in enemiesHit)
-                    {
-                        if (enemy.CompareTag("Enemy"))
-                        {
-                            Vector2 directionToEnemy = enemy.transform.position - weaponTransform.position;
-                            float angleToEnemy = Vector2.Angle(weaponTransform.right, directionToEnemy);
-                            if (angleToEnemy <= sword.attackAngle / 2)
-                            {
-                                // Deal damage to the enemy
-                                sword.DealDamage(enemy);
-                            }
-                        }
-                    }   
+                    sword.DealDamageToEnemies(enemiesHit, weaponTransform);
                 }
                 
                 if (currentWeapon is Gun gun)
