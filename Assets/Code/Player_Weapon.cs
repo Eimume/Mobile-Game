@@ -4,26 +4,25 @@ public class Player_Weapon : MonoBehaviour
 {
     public Transform weaponHolder;    // ตำแหน่งที่จะติดตั้งอาวุธ
     public Weapon currentWeapon;      // อาวุธปัจจุบันที่ถืออยู่
-    //private GameObject droppedWeapon;       // Store the dropped weapon object
 
     private GameObject equippedWeaponInstance;
      private WeaponPickup nearbyWeaponPickup; // Store the nearby weapon pickup
 
-    //public Transform gunTransform;    // อ้างถึง Transform ของปืน
+
     public Transform weaponTransform; // Transform of the weapon (used for aiming)
-
     private Transform nearestEnemy;
-    //public GameObject enemy;
 
-    //public LineRenderer lineRenderer;
     public Weapon hand;
-
     private GameObject lastDroppedWeaponInstance;
+
+    private bool isAttacking = false;
+    private Quaternion originalRotation;
     
 
     private void Start()
     {
         EquipWeapon(hand);
+        //originalRotation = weaponTransform.localRotation;
 
     }
     private void Update()
@@ -31,7 +30,6 @@ public class Player_Weapon : MonoBehaviour
 
         nearestEnemy = FindNearestEnemy();
         
-
         // กดปุ่มซ้ายเมาส์เพื่อโจมตี
         if (nearbyWeaponPickup != null && nearbyWeaponPickup.IsPlayerNear() && Input.GetKeyDown(KeyCode.Q))
         {
@@ -43,6 +41,14 @@ public class Player_Weapon : MonoBehaviour
         {
                 Attack();
         }
+        /*else
+        {
+            if (currentWeapon is Sword && !isAttacking )
+            {
+                // Reset to original rotation when not attacking
+                weaponTransform.localRotation = originalRotation;
+            }
+        }*/
     }
     
     public void SwitchWeapon()
@@ -112,6 +118,7 @@ public class Player_Weapon : MonoBehaviour
         if (newWeapon is Sword)
         {
             equippedWeaponInstance.transform.localRotation = Quaternion.Euler(0, 0, -90); // Rotate sword by -90 degrees
+            //originalRotation = equippedWeaponInstance.transform.localRotation;
         }
         else
         {
@@ -140,11 +147,16 @@ public class Player_Weapon : MonoBehaviour
                 // If enemy is within range, execute the attack
                 if (currentWeapon is Sword sword)
                 {
+                    //isAttacking = true;
+                    //weaponTransform.localRotation = Quaternion.Euler(0, 0, -90);
+
                     sword.Attack();
                     Debug.Log("Attacking with sword!");
 
                     Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(weaponTransform.position, sword.attackRadius);  // Sword swing range
                     sword.DealDamageToEnemies(enemiesHit, weaponTransform);
+
+                    //isAttacking = false;
                 }
                 
                 if (currentWeapon is Gun gun)
