@@ -8,6 +8,7 @@ TagManager:
   - water
   - Enemy
   - enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: behind floor
+    uniqueID: 1817655847
+    locked: 0
+  - name: wall
+    uniqueID: 1004897351
+    locked: 0
+  - name: floor
+    uniqueID: 3747511545
+    locked: 0
+  - name: deco
+    uniqueID: 2662246345
     locked: 0
   m_RenderingLayers:
   - Default
