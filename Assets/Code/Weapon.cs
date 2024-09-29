@@ -151,7 +151,7 @@ public class Sword : Weapon
     public float attackAngle = 180f; // Attack angle range (180 degrees)
     public float attackCooldown = 1.0f;     // Time delay between sword attacks
 
-    private float attackTimer;
+    private float attackTimer = 0f;
     private bool canAttack = true;
     //private bool canDealDamage = true; 
 
@@ -166,14 +166,21 @@ public class Sword : Weapon
 
     public override void Attack()
     {
-        if (canAttack)
+        if (!canAttack)
+        {
+            attackTimer -= Time.deltaTime;
+
+            if (attackTimer <= 0f)
+            {
+                canAttack = true;
+            }
+        }
+        else if (canAttack)
         {
             Debug.Log("Sword swinging: " + weaponName);
             canAttack = false;  // Set the sword to not able to attack again until cooldown
             attackTimer = 0f;
-            //canDealDamage = false;
 
-            // Logic for dealing damage to enemies (handled in Player_Weapon)
         }
         else
         {
@@ -181,31 +188,32 @@ public class Sword : Weapon
         }
     }
 
-    public void UpdateCooldown(float deltaTime)
+    public void UpdateCooldown()
     {
         if (!canAttack)
         {
-            attackTimer += Time.deltaTime;
+            attackTimer -= Time.deltaTime;
 
             // When the timer exceeds the cooldown period, reset the ability to attack
-            if (attackTimer >= attackCooldown)
+            if (attackTimer <= 0f)
             {
                 canAttack = true;
-                //canDealDamage = true;
-                //attackTimer = 0f;
             }
         }
     }
     public void DealDamage(Collider2D enemyCollider)
     {
-        
+        if (canAttack)
+        {
             EnemyHealth enemy = enemyCollider.GetComponent<EnemyHealth>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
                 Debug.Log("Dealt " + damage + " damage to " + enemy.name);
+                canAttack = false;
+                attackTimer = attackCooldown;
             }
-        
+        }
     }   
 
 }

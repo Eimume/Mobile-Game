@@ -20,4 +20,4 @@ MonoBehaviour:
   damage: 20
   attackRadius: 2.72
   attackAngle: 183.4
-  attackCooldown: 3
+  attackCooldown: 1

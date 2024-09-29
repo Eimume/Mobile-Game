@@ -31,10 +31,6 @@ public class Player_Weapon : MonoBehaviour
 
         nearestEnemy = FindNearestEnemy();
         
-        if (currentWeapon is Sword sword)
-        {
-            sword.UpdateCooldown(Time.deltaTime);
-        }
 
         // กดปุ่มซ้ายเมาส์เพื่อโจมตี
         if (nearbyWeaponPickup != null && nearbyWeaponPickup.IsPlayerNear() && Input.GetKeyDown(KeyCode.Q))
