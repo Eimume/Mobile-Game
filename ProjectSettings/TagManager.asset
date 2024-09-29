@@ -7,8 +7,6 @@ TagManager:
   - player
   - water
   - Enemy
-  - enemy
-  tags: []
   layers:
   - Default
   - TransparentFX
@@ -57,6 +55,12 @@ TagManager:
     locked: 0
   - name: deco
     uniqueID: 2662246345
+    locked: 0
+  - name: Enemy
+    uniqueID: 1800342077
+    locked: 0
+  - name: Player
+    uniqueID: 1320468579
     locked: 0
   m_RenderingLayers:
   - Default
