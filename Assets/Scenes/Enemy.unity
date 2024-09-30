@@ -573,6 +573,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1052125845 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4052383210658597145, guid: dddcdb5d036f14c4faef5d869c393c23, type: 3}
+  m_PrefabInstance: {fileID: 1192636413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1101017990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +781,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4052383210658597145, guid: dddcdb5d036f14c4faef5d869c393c23, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052383210658597145, guid: dddcdb5d036f14c4faef5d869c393c23, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4413998569376211499, guid: dddcdb5d036f14c4faef5d869c393c23, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.314019
@@ -1340,6 +1353,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 514004176418693395, guid: 3efb1acbed865204d87761f5d1e1b68a, type: 3}
+      propertyPath: weaponSpriteRenderer
+      value: 
+      objectReference: {fileID: 1052125845}
     - target: {fileID: 5728141105687012414, guid: 3efb1acbed865204d87761f5d1e1b68a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.12
