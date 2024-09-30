@@ -18,7 +18,7 @@ TagManager:
   - Player
   - wall
   - player
-  - 
+  - door
   - 
   - 
   - 
@@ -47,11 +47,11 @@ TagManager:
   - name: behind floor
     uniqueID: 1817655847
     locked: 0
-  - name: wall
-    uniqueID: 1004897351
-    locked: 0
   - name: floor
     uniqueID: 3747511545
+    locked: 0
+  - name: wall
+    uniqueID: 1004897351
     locked: 0
   - name: deco
     uniqueID: 2662246345
