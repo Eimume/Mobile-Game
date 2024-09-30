@@ -16,16 +16,24 @@ public class EnemyShooter : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer _spriteRenderer;
+    [SerializeField] EnemyHealth enemyHealth;  // Reference to the EnemyHealth script
 
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        enemyHealth = GetComponent<EnemyHealth>();
 
     }
 
     void Update()
     {
+        if (enemyHealth.GetCurrentHealth() <= 0)
+        {
+            canShoot = false;  // Disable shooting
+            return;            // Exit the function if the enemy is dead
+        }
+
        shootingTimer += Time.deltaTime;
 
         if (canShoot)
@@ -37,7 +45,6 @@ public class EnemyShooter : MonoBehaviour
                 Debug.Log("Shoot");
                 anim.SetTrigger("Shoot");
                 Shoot();                
-                //shootingTimer = shootingInterval; // Reset the timer
                 
             }
         }
@@ -67,7 +74,13 @@ public class EnemyShooter : MonoBehaviour
     }
     public void EnableShooting(bool value)
     {
-        canShoot = value;  // Set whether shooting is allowed
-
+        if (enemyHealth.GetCurrentHealth() > 0)  // Only allow shooting if the enemy is alive
+        {
+            canShoot = value;
+        }
+        else
+        {
+            canShoot = false;  // Disable shooting if the enemy is dead
+        }
     }
 }

@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 1133033796329732273}
   - component: {fileID: 65761224365782827}
   m_Layer: 6
-  m_Name: Orenge
+  m_Name: orenge
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,6 +326,7 @@ MonoBehaviour:
   enattack: {fileID: 8757098055107176464}
   anim: {fileID: 1752887213427483126}
   _spriteRenderer: {fileID: 3290748451845046042}
+  enemyHealth: {fileID: 0}
 --- !u!114 &1133033796329732273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHp: 100
+  time: 5
+  anim: {fileID: 1752887213427483126}
 --- !u!1 &8906142233309329339
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,4 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   TimeHitCoolDown: 2
+  canHit: 1
+  isPlayerInTrigger: 0
   anim: {fileID: 1752887213427483126}
+  enemyHealth: {fileID: 65761224365782827}

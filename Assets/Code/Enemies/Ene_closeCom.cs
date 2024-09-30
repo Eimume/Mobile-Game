@@ -6,13 +6,14 @@ public class Ene_closeCom : MonoBehaviour
     public int damage = 10;
     public float TimeHitCoolDown;
 
-    private bool canHit = true;
-    private bool isPlayerInTrigger = false;
+    public bool canHit = true;
+    public bool isPlayerInTrigger = false;
     private float cooldownTimer = 0f;
     private GameObject player;
 
      [Header("Dependencies")]
     [SerializeField] Animator anim;
+    [SerializeField] EnemyHealth enemyHealth;
 
 void Start ()
     {
@@ -22,6 +23,12 @@ void Start ()
     
     void Update()
     {
+        if (enemyHealth != null && enemyHealth.GetCurrentHealth() <= 0)
+        {
+            canHit = false;  // Prevent further attacks
+            return;  // Exit the update when dead
+        }
+        
         if (!canHit)
         {
             cooldownTimer -= Time.deltaTime;

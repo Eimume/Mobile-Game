@@ -21,18 +21,27 @@ public class EnemyCombat : MonoBehaviour
     [SerializeField] Ene_closeCom enattack;
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer _spriteRenderer;
+    [SerializeField] EnemyHealth enemyHealth;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pathfinding = GetComponent<AstarPathfinding>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;       
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        enemyHealth = GetComponent<EnemyHealth>();    
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (enemyHealth != null && enemyHealth.GetCurrentHealth() <= 0)
+        {
+            StopMoving();
+            return;  // Exit update when dead
+        }
+
         if (enattack != null)
         {
             enattack.damage = attack;
@@ -57,6 +66,13 @@ public class EnemyCombat : MonoBehaviour
             pathfinding.StopMoving();
         }
 
+    }
+
+    private void StopMoving()
+    {
+        anim.SetBool("isWalk", false);
+        pathfinding.StopMoving();
+        rb.velocity = Vector2.zero;  // Stop Rigidbody movement
     }
 
     private void OnDrawGizmosSelected()

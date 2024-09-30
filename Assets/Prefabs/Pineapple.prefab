@@ -172,7 +172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   TimeHitCoolDown: 2
+  canHit: 1
+  isPlayerInTrigger: 0
   anim: {fileID: 2835055602687595525}
+  enemyHealth: {fileID: 6943519621525432003}
 --- !u!1 &7023821707018975419
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +329,7 @@ MonoBehaviour:
   enattack: {fileID: 4364498114525892214}
   anim: {fileID: 2835055602687595525}
   _spriteRenderer: {fileID: 5386084043978856493}
+  enemyHealth: {fileID: 0}
 --- !u!114 &4947756607554823335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHp: 100
+  time: 5
+  anim: {fileID: 2835055602687595525}
 --- !u!1 &7234566638154236903
 GameObject:
   m_ObjectHideFlags: 0

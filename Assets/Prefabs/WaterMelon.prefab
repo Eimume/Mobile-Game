@@ -145,6 +145,7 @@ MonoBehaviour:
   bulletSpeed: 5
   anim: {fileID: 2187242214044057311}
   _spriteRenderer: {fileID: 19383077970959007}
+  enemyHealth: {fileID: 6874437755433307690}
 --- !u!114 &4904006888148471068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +179,7 @@ MonoBehaviour:
   retreatSpeed: 2
   anim: {fileID: 2187242214044057311}
   _spriteRenderer: {fileID: 19383077970959007}
+  enemyHealth: {fileID: 6874437755433307690}
 --- !u!114 &6874437755433307690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHp: 100
+  time: 5
+  anim: {fileID: 2187242214044057311}
 --- !u!61 &604900093095558687
 BoxCollider2D:
   m_ObjectHideFlags: 0

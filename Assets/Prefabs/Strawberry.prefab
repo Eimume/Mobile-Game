@@ -246,7 +246,8 @@ MonoBehaviour:
   dashSpeed: 10
   dashDuration: 0.2
   dashCooldown: 2
-  player: {fileID: 0}
+  _player: {fileID: 0}
+  attackScript: {fileID: 5192874674307371518}
 --- !u!1 &3245186419596106976
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +387,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   TimeHitCoolDown: 2
+  canHit: 1
+  isPlayerInTrigger: 0
+  player: {fileID: 0}
   anim: {fileID: 239353645118251942}
 --- !u!1 &4266575750744767574
 GameObject:

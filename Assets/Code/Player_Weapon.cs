@@ -22,8 +22,6 @@ public class Player_Weapon : MonoBehaviour
     private void Start()
     {
         EquipWeapon(hand);
-
-
     }
     private void Update()
     {

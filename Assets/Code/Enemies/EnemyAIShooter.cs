@@ -12,13 +12,14 @@ public class EnemyAIShooter : MonoBehaviour
     private AstarPathfinding pathfinding; // Reference to your A* pathfinding script
     private bool isFollowingPlayer = false; // Is the enemy following the player?
     private EnemyShooter enemyShooter; // Reference to the EnemyShooter component
+        private bool isAlive = true;  // To track if the enemy is alive
     
 
     [Header("Dependencies")]
     Rigidbody2D rb;
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer _spriteRenderer;
-    //[SerializeField] Transform _transform;
+    [SerializeField] EnemyHealth enemyHealth;  // Reference to the EnemyHealth script
 
 
     void Start()
@@ -27,11 +28,19 @@ public class EnemyAIShooter : MonoBehaviour
         pathfinding = GetComponent<AstarPathfinding>();
         enemyShooter = GetComponent<EnemyShooter>(); // Get the shooter component
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        enemyHealth = GetComponent<EnemyHealth>();
 
     }
 
     void Update()
     {
+        if (enemyHealth.GetCurrentHealth() <= 0)
+        {
+            isAlive = false;  // Set alive status to false
+            enemyShooter.EnableShooting(false);  // Disable shooting
+            StopMoving();  // Stop movement
+            return;  // Exit the update if the enemy is dead
+        }
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= detectionRadius)
@@ -75,6 +84,14 @@ public class EnemyAIShooter : MonoBehaviour
         
         
     }
+    private void StopMoving()
+    {
+        pathfinding.StopMoving();  // Stop movement
+        anim.SetBool("isWalk", false);  // Stop walk animation
+        anim.SetBool("isWalkBack", false);  // Stop walk back animation
+        //rb.velocity = Vector2.zero;  // Stop Rigidbody movement
+    }
+
     
     void RetreatFromPlayer()
     {

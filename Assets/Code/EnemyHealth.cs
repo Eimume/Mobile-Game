@@ -6,6 +6,8 @@ public class EnemyHealth : MonoBehaviour
     public int MaxHp = 100;
     public float time = 5f;
     private int currentHp;
+
+    [SerializeField] Animator anim;
     void Start()
     {
         currentHp = MaxHp;
@@ -28,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy has died!");
+        anim.SetTrigger("die");
         //Destroy(gameObject);
         StartCoroutine(DieAndDestroy());
         // Add additional code to handle player's death (e.g., respawn, game over screen)
@@ -36,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
     private IEnumerator DieAndDestroy()
     {
         // Optionally, you can disable the enemy's collider or any other components here
-        // GetComponent<Collider2D>().enabled = false;
+         GetComponent<Collider2D>().enabled = false;
 
         // Wait for 5 seconds
         yield return new WaitForSeconds(time);
