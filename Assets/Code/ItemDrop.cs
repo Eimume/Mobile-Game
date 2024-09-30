@@ -10,18 +10,40 @@ public class GachaItem
 public class ItemDrop : MonoBehaviour
 {
     public List<GachaItem> gachaItems; // A list of gacha items with their respective drop rates
-    private bool isPlayerInGachaZone = false; // A flag to check if the player is in the collider zone
+    public Transform spawnPoint; 
 
+    private bool isPlayerInGachaZone = false; // A flag to check if the player is in the collider zone
+    private bool hasUsedGacha = false;
+
+    [SerializeField] Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     void Update()
     {
         // Check if the player presses the 'Q' key
-        if (isPlayerInGachaZone && Input.GetKeyDown(KeyCode.Q))
+        if (isPlayerInGachaZone && Input.GetKeyDown(KeyCode.Q) && !hasUsedGacha)
         {
+            anim.SetTrigger("open");
             // Call the GachaDrop method to randomly select a weapon
             Weapon droppedWeapon = GachaDrop();
             if (droppedWeapon != null)
             {
                 Debug.Log("Dropped Weapon: " + droppedWeapon.weaponName);
+
+                if (droppedWeapon.weaponPrefab != null && spawnPoint != null)
+                {
+                    Instantiate(droppedWeapon.weaponPrefab, spawnPoint.position, spawnPoint.rotation);
+                }
+                else
+                {
+                    Debug.LogWarning("Weapon prefab or spawn point is missing!");
+                }
+
+                hasUsedGacha = true;
+                Debug.Log("Gacha used. Cannot use again.");
             }
             else
             {
