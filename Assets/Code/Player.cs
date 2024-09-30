@@ -30,8 +30,13 @@ public class Player : MonoBehaviour
             playerMovement.SetSpeed(currentState.speed);
         }
     }
+    public void PowerUp(PlayerState powerUpState)
+    {
+        Debug.Log("Power-up collected! Changing player state...");
+        ChangeState(powerUpState);
+    }
 
-    public void TakeDamage(int damage)
+    /*public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
@@ -39,11 +44,11 @@ public class Player : MonoBehaviour
             health = 0;
             Debug.Log("Player is dead!");
         }
-    }
+    }*/
     public void ChangeState(PlayerState newState)
     {
-        currentState.OnStateExit(this);
+        //currentState.OnStateExit(this);
         ApplyState(newState);
-        currentState.OnStateEnter(this);
+        //currentState.OnStateEnter(this);
     }
 }

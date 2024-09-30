@@ -5,6 +5,7 @@ public class Bullet_Weapon : MonoBehaviour
     public float speed = 5f; // Speed of the bullet
     private int bulletDamage;
     public float lifeTime = 3f; // How long the bullet exists before being destroyed
+    public LayerMask wallLayer; // LayerMask for the wall layer
 
     private void Start()
     {
@@ -33,6 +34,11 @@ public class Bullet_Weapon : MonoBehaviour
 
             Destroy(gameObject);  // Destroy bullet when it hits the enemy
             // You could also apply damage to the enemy here
+        }
+        else if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        {
+            // Destroy the bullet if it hits a wall (on the Wall layer)
+            Destroy(gameObject);
         }
     }
 }

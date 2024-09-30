@@ -4,12 +4,16 @@ public class Player_HP : MonoBehaviour
 {
     public int maxHp = 100;
 
-    private int currentHp;
+    public int currentHp;
     void Start()
     {
         currentHp = maxHp;   
     }
 
+    public void SetHp(int newHp)
+    {
+        maxHp = newHp;
+    }
     public void TakeDamage(int damageAmount)
     {  
         currentHp -= damageAmount;
@@ -24,8 +28,11 @@ public class Player_HP : MonoBehaviour
 
     }
 
-     /*public void Heal(int healAmount)
+     public void Heal(int healAmount)
     {
+        Debug.Log("Healing amount: " + healAmount);
+        Debug.Log("Player current HP before healing: " + currentHp);
+
         currentHp += healAmount;
 
         // Ensure health doesn't exceed maxHealth
@@ -35,7 +42,7 @@ public class Player_HP : MonoBehaviour
         }
         
         Debug.Log("Player Health: " + currentHp);
-    }*/
+    }
     private void Die()
     {
         Debug.Log("Player has died!");
