@@ -11,6 +11,8 @@ public class Weapon : ScriptableObject
     public float aimRange = 5f;
     public GameObject weaponPrefab;
 
+    public int playerDamageOnEquip = 0;
+
 
     // ฟังก์ชันโจมตีสำหรับดาบหรือปืน
     public virtual void Attack()
@@ -240,6 +242,14 @@ public class Sword : Weapon
 }
 #endregion
 
+[CreateAssetMenu(fileName = "NewHand", menuName = "Weapons/Handcombat")]
+public class Handcombat : Sword
+{
+    public override void Attack()
+    {
+        Debug.Log("punch" + weaponName);
+    }
+}
 [CreateAssetMenu(fileName = "hand", menuName = "Weapons/Hand")]
 public class Hand : Weapon
 {

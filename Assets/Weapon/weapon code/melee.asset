@@ -17,7 +17,7 @@ MonoBehaviour:
   weaponIcon: {fileID: -2440374649720087654, guid: be661201c7da8c14e9e71a467cdb7056, type: 3}
   aimRange: 3.48
   weaponPrefab: {fileID: 936002087993230886, guid: d29d5339d5f3e994d947aa36ec147720, type: 3}
+  playerDamageOnEquip: 10
   damage: 20
   attackRadius: 2.72
   attackAngle: 183.4
-  attackCooldown: 1

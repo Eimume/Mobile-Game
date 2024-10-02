@@ -6649,6 +6649,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &465012493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8566102131495427596, guid: 9d8fca887cdee054a949eb15a4985d34, type: 3}
+  m_PrefabInstance: {fileID: 1189227512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &473362824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4785409193021484421, guid: 3f6e4cd6518181c4fbc3a016a4803781, type: 3}
+  m_PrefabInstance: {fileID: 1667595513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717524489
 GameObject:
   m_ObjectHideFlags: 0
@@ -11092,7 +11102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1915558883}
-  enemy: {fileID: 0}
+  enemiesInRoom:
+  - {fileID: 465012493}
+  - {fileID: 473362824}
 --- !u!19719996 &1157239229
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -11174,7 +11186,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -547455751
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -11946,6 +11958,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3094799655286924522, guid: 9d8fca887cdee054a949eb15a4985d34, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094799655286924522, guid: 9d8fca887cdee054a949eb15a4985d34, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094799655286924522, guid: 9d8fca887cdee054a949eb15a4985d34, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4778580120926697479, guid: 9d8fca887cdee054a949eb15a4985d34, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.68705
@@ -13208,11 +13232,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 226816020961775005, guid: 8c71de9f5ffe5de489851c3093e52660, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.356777
+      value: -19.05
       objectReference: {fileID: 0}
     - target: {fileID: 226816020961775005, guid: 8c71de9f5ffe5de489851c3093e52660, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7842827
+      value: 17.89
       objectReference: {fileID: 0}
     - target: {fileID: 226816020961775005, guid: 8c71de9f5ffe5de489851c3093e52660, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13245,6 +13269,10 @@ PrefabInstance:
     - target: {fileID: 226816020961775005, guid: 8c71de9f5ffe5de489851c3093e52660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366842301546688539, guid: 8c71de9f5ffe5de489851c3093e52660, type: 3}
+      propertyPath: gachaItems.Array.data[0].dropRate
+      value: 95.5
       objectReference: {fileID: 0}
     - target: {fileID: 8127546667810481474, guid: 8c71de9f5ffe5de489851c3093e52660, type: 3}
       propertyPath: m_Name
