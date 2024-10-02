@@ -6,7 +6,7 @@ public class Player_Weapon : MonoBehaviour
     public Weapon currentWeapon;      // อาวุธปัจจุบันที่ถืออยู่
 
     private GameObject equippedWeaponInstance;
-     private WeaponPickup nearbyWeaponPickup; // Store the nearby weapon pickup
+    private WeaponPickup nearbyWeaponPickup; // Store the nearby weapon pickup
 
 
     public Transform weaponTransform; // Transform of the weapon (used for aiming)
