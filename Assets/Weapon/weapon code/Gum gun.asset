@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Gum gun
   m_EditorClassIdentifier: Assembly-CSharp::Gun
   weaponName: Gum gun
-  attackSpeed: 10
+  attackSpeed: 2
   weaponIcon: {fileID: 2890413966830446974, guid: be661201c7da8c14e9e71a467cdb7056, type: 3}
   aimRange: 10.89
   weaponPrefab: {fileID: 9211217930498800286, guid: dddcdb5d036f14c4faef5d869c393c23, type: 3}
   bulletPrefab: {fileID: 3684454399724150229, guid: 2960aba812196b84f89c8c5f5241e821, type: 3}
+  bulletSpeed: 2
   shootInterval: 0.5
   maxAmmo: 10
   reloadTime: 2

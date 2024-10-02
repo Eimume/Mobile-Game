@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717750b88d65f214fb36571df4e1e091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponToEquip: {fileID: 11400000, guid: 5d0513b5d8c1af9459e9dcc74d567cad, type: 2}
+  weaponToEquip: {fileID: 11400000, guid: 6bfce5b58b9adb240ac275b1250fe4b8, type: 2}
 --- !u!58 &1603783088119463020
 CircleCollider2D:
   m_ObjectHideFlags: 0

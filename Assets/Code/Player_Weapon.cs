@@ -14,9 +14,6 @@ public class Player_Weapon : MonoBehaviour
 
     public Weapon hand;
     private GameObject lastDroppedWeaponInstance;
-
-    private bool isAttacking = false; // To track whether the weapon is in use
-
     
 
     private void Start()
@@ -37,25 +34,10 @@ public class Player_Weapon : MonoBehaviour
 
         }
 
-        if (currentWeapon is Sword sword)
+         if (Input.GetKey(KeyCode.E))
         {
-            if (Input.GetKey(KeyCode.E))
-            {
                 Attack();
-            }
-            else
-            {
-                // Rotate sword to 90 degrees when not attacking
-                weaponTransform.localRotation = Quaternion.Euler(0, 0, 90);
-            }
-        }
-        else
-        {
-            // Handle other weapons (e.g., gun)
-            if (Input.GetKey(KeyCode.E))
-            {
-                Attack();
-            }
+
         }
     }
     
@@ -145,7 +127,6 @@ public class Player_Weapon : MonoBehaviour
                 // If enemy is within range, execute the attack
                 if (currentWeapon is Sword sword)
                 {
-                    isAttacking = true;
 
                     sword.Attack();
                     Debug.Log("Attacking with sword!");
