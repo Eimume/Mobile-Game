@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4741347231600747846}
   - component: {fileID: 246386660217524610}
   - component: {fileID: 6563068957069747915}
+  - component: {fileID: -6526176506445900534}
   m_Layer: 0
   m_Name: Melee
   m_TagString: Untagged
@@ -138,3 +139,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.45, y: 0}
   m_Radius: 1.21
+--- !u!95 &-6526176506445900534
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936002087993230886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4335b0b76951bdf47ae1eefe59a13736, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

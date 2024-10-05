@@ -13,6 +13,9 @@ public class Weapon : ScriptableObject
 
     public int playerDamageOnEquip = 0;
 
+    
+
+    
 
     // ฟังก์ชันโจมตีสำหรับดาบหรือปืน
     public virtual void Attack()
@@ -155,9 +158,12 @@ public class Sword : Weapon
 
     private float attackTimer = 0f;
     private bool canAttack = true;
-    //private bool canDealDamage = true; 
+    public Animator anim;
 
-
+    public void start()
+    {
+        anim = weaponPrefab.GetComponent<Animator>();
+    }
     public override bool AimAtEnemy(Transform weaponTransform, Transform nearestEnemy)
     {
         if (nearestEnemy == null) return false;

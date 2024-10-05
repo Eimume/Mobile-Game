@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Weapon : MonoBehaviour
@@ -16,18 +17,22 @@ public class Player_Weapon : MonoBehaviour
     public Player_HP playerHP;
     private GameObject lastDroppedWeaponInstance;
 
+    public Animator anime;
+
     private bool isAttacking = false; // To track whether the weapon is in use
 
     
 
     private void Start()
     {
+        
         EquipWeapon(hand);
 
         if (playerHP == null)
         {
             playerHP = GetComponent<Player_HP>();
         }
+        
     }
     private void Update()
     {
@@ -46,11 +51,14 @@ public class Player_Weapon : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 Attack();
+                anime.SetTrigger ("attack");
+                //anime.SetBool("isAttack", true);
             }
             else
             {
                 // Rotate sword to 90 degrees when not attacking
                 weaponTransform.localRotation = Quaternion.Euler(0, 0, 90);
+                //anime.SetBool("isAttack", false);
             }
         }
         else
@@ -161,6 +169,11 @@ public class Player_Weapon : MonoBehaviour
                 // If enemy is within range, execute the attack
                 if (currentWeapon is Sword sword)
                 {
+                    anime = equippedWeaponInstance.GetComponent<Animator>();
+                    //anime = currentWeapon.anim;
+                    //anime.SetTrigger ("attack");
+                    
+
                     isAttacking = true;
 
                     sword.Attack();
