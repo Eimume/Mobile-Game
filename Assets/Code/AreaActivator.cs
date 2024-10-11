@@ -1,17 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AreaActivator : MonoBehaviour
 {
     //public string playerTag = "Player";
     public GameObject door;
+    //public string enemyTag = "Enemy";
+    public List <GameObject> enemiesInRoom = new List<GameObject>();
     private bool playerInside = false;
-    public GameObject enemy;
+    //public GameObject enemy;
 
     void Start ()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
-        enemy.SetActive(false);
+        //enemy = GameObject.FindGameObjectWithTag("Enemy");
+        //enemy.SetActive(false);
+        SetEnemiesActive(false);
         door.SetActive(false);
+    }
+
+    private void SetEnemiesActive(bool isActive)
+    {
+        foreach (GameObject enemy in enemiesInRoom)
+        {
+            enemy.SetActive(isActive);
+        }
     }
     // This will be called when the player enters the trigger area
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,43 +32,44 @@ public class AreaActivator : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = true;
-            // Activate all enemies in the area
-            //ActivateEnemies(true);
+            SetEnemiesActive(true);
 
             if (door != null)
             {
                 door.SetActive(true); // Make the door appear
             }
 
-            if (enemy != null)
-            {
-                enemy.SetActive(true); // Make the door appear
-            }
+            
         }
+
+        
+        /*if (other.CompareTag(enemyTag))
+            {
+                GameObject[] x = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach(GameObject Enemy in x)
+                {
+                    enemiesInTrigger.Add(Enemy);
+                }
+                
+                /*if (enemy != null)
+                {
+                    enemy.SetActive(true); // Make the door appear
+                }*/
+            
     }
+
 
     // When the player exits the trigger area (if needed)
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            SetEnemiesActive(false);
             playerInside = false;
         }
 
     }
 
-    // Helper method to activate/deactivate enemies
-    /*private void ActivateEnemies(bool activate)
-    {
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            // Check if the enemy is within the activation zone
-            if (IsEnemyInArea(enemy))
-            {
-                enemy.SetActive(activate); // Activate or deactivate the enemy
-            }
-        }
-    }*/
 
     // Helper method to check if the enemy is within the collider area
     private bool IsEnemyInArea(GameObject enemy)
