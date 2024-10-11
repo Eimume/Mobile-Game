@@ -3,11 +3,13 @@ using UnityEngine;
 public class Player_HP : MonoBehaviour
 {
     public int maxHp = 100;
-
     public int currentHp;
+    private playerMovement playerMovementScript;
+
     void Start()
     {
-        currentHp = maxHp;   
+        currentHp = maxHp;
+        playerMovementScript = GetComponent<playerMovement>(); 
     }
 
     public void SetHp(int newHp)
@@ -21,7 +23,7 @@ public class Player_HP : MonoBehaviour
         if (currentHp <= 0)
         {
             currentHp = 0;
-            //Die();
+            Die();
         }
 
         Debug.Log("Player health: " + currentHp);
@@ -46,7 +48,13 @@ public class Player_HP : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player has died!");
-        // Add additional code to handle player's death (e.g., respawn, game over screen)
+        playerMovementScript.enabled = false;
+        
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     public int GetCurrentHealth()
